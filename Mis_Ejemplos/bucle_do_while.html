@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo bucle do/while</title>
+<style>
+h1{color:#F30;
+}
+table{
+}
+
+</style>
+</head>
+
+<body>
+<h1>Adivina el número</h1>
+<table width:"25%" border="0">
+	<tr>
+    	<td><label for="textfield"></label>
+        <input type="text" name="textfield" id="c_mensaje" />
+        </td>
+        <td><label for="textfield2"></label>
+        <input type="text" name="textfield2" id="c_intentos" />
+        </td>
+	</tr>
+</table>
+<script>
+
+var aleatorio=(Math.round(Math.random())*100);// genera un número entero aleatorio entre 0 y 100
+var numero,intentos;
+numero=0;
+intentos=0; 
+var mensaje=document.getElementById("c_mensaje");//guarda en la variable el mensaje que entra en el id=c_mensaje
+var intentos_consumidos=document.getElementById("c_intentos");// guarda en la variable el número de veces que se intenta 
+
+do{
+	numero=prompt("Introduce un número entre el 0 y 100");
+	if(aleatorio>numero){
+		mensaje.value=("Más alto");
+		mensaje.style.fontSize="18px";
+	}
+	numero=prompt("Introduce un número entre el 0 y 100");
+	if(aleatorio<numero){
+		mensaje.value=("Más bajo");
+		mensaje.style.fontSize="18px";
+	}
+	intentos++;
+	intentos_consumidos.value(intentos);
+	intentos_consumidos.style.fontSize="18px";
+	intentos_consumidos.style.color="red";
+	intentos_consumidos.style.textAlign="center";
+	
+}while(aleatorio!=numero);
+	mensaje.value=("Correcto");
+	mensaje.style.color="red";
+</script>
+
+</body>
+</html>

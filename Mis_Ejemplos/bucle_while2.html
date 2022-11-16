@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo bucle while 2</title>
+
+<style>
+	#contenedor{width:15%;
+	height:auto;
+	background-color:#0FC;
+	margin:auto;
+	padding:15%;
+	}
+</style>
+<script>
+var nombre,edad,poblacion;
+nombre=prompt("Introduce tú Nombre");
+while(!isNaN(nombre)){// si no es una cadena
+	nombre=prompt("Introduce un Nombre Válido");
+}
+edad=prompt("Introduce tú Edad");
+while(edad<=0||edad>=105||isNaN(edad)){// en este caso isNaN si es una cadena
+	edad=prompt("Introduce una Edad válida");
+	}
+poblacion=prompt("Introduce tú Población");
+while(!isNaN(poblacion)){
+	pooblacion=prompt("Introduce una Población Válida");
+}
+</script>
+</head>
+
+
+<body>
+<div id="contenedor">
+	<p>Nombre:
+    <script>document.write(nombre);</script>
+    </p>
+	<p>Edad:
+     <script>document.write(edad);</script>
+    </p>
+	<p>Población:
+     <script>document.write(poblacion);</script>
+    </p>
+</div>
+</body>
+</html>
