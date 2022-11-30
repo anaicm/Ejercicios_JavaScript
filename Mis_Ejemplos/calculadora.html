@@ -13,6 +13,10 @@
 	width:60px;
 	height:60Px;
 }
+.resert{
+	width:60px;
+	height:60Px;
+}
 table{
 	margin:auto;
 }
@@ -72,8 +76,14 @@ table{
 		}else if(dividir){
 			acumular=acumular/parseInt(cifra);
 			document.getElementById("display").value=acumular;
+		
 		}else{
-			acumular=acumular-parseInt(cifra);//lo que entra en display es de tipo texto por lo que hay que parsear
+			
+			if(acumular==0){//no pone el signo menos delante del número si la calculadora esta en el inicio
+				acumular=cifra;
+			}else{
+				acumular=acumular-parseInt(cifra);
+			}
 			document.getElementById("display").value=acumular;
 		}
 	// variable que resetea el número primero para poner el siguiente número a sumar
@@ -124,7 +134,7 @@ table{
 			acumular=acumular*parseInt(cifra);
 			document.getElementById("display").value=acumular;
 		}else{//pero si no realiza la division
-				if(acumular==0){
+			if(acumular==0){
 				acumular=cifra;
 			}else{
 				acumular=acumular/parseInt(cifra);
@@ -155,6 +165,15 @@ table{
 		acumular=parseInt(document.getElementById("display").value);
 	//resetear la variable cifra para poder realizar una nueva operación
 		cifra=0;
+	}
+	function resetear(){
+		if(parseInt(cifra)!=""){
+			cifra="";
+			document.getElementById("display").value=cifra;
+		}else{
+			document.getElementById("display").value=0;
+		}
+		
 	}
 	
 </script>
@@ -195,7 +214,8 @@ table{
 	<td ><input name="num0" type="button"  class="numero" id="num0" value="0" onclick="display_numeros(0)"/></td>
     <td ><input name="coma" type="button"  class="numero" id="coma" value="," /></td>
     <td ><input name="igual" type="button"  class="igual" id="igual" value="=" onclick="resultado()"/></td>
-    <td >&nbsp;</td>
+	<td ><input name="resert" type="button"  class="resert" id="resert" value="C" onclick="resetear"/></td>
+	
 </tr>
 </table>
 <script>
