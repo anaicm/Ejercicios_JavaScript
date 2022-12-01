@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>eval</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso El método eval() evalúa o ejecuta un argumento.
+        Si el argumento es una expresión, eval() evalúa la expresión. 
+        Si el argumento es una o más declaraciones de JavaScript, eval()
+        ejecuta las declaraciones.-->
+    <!--NO use eval() Ejecutar JavaScript desde una cadena es un GRAN riesgo de seguridad.
+        Con eval(), el código malicioso puede ejecutarse dentro de su aplicación sin permiso.
+        Con eval(), el código de terceros puede ver el alcance de su aplicación, lo que puede generar posibles ataques.-->
+    <!--Como parámetro entra un String (una expresión, variable, declaración o secuencia de declaraciones de JavaScript)-->
+    <!--Sintaxis=>eval(string)-->
+    
+</head>
+<body>
+    <!--Usando eval()-->
+<h1>JavaScript Global Methods</h1>
+<h2>The eval() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+let x = 10;
+let y = 20;
+let text = "x * y";
+let result = eval(text);
+
+document.getElementById("demo").innerHTML = result;
+</script>
+<!--Sin usar eval() se obtiene el mismo resultado-->
+<h1>JavaScript Global Methods</h1>
+<h2>The eval() Method</h2>
+
+<p id="demo2"></p>
+
+
+<script>
+   
+let a = 10;
+let b = 20;
+
+let resultado = a * b;
+
+document.getElementById("demo2").innerHTML = resultado;
+
+</script>
+</body>
+</html>

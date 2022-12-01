@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>isNaN</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso
+        El método isFinite() devuelve verdadero si un valor es un número finito.
+        Los valores infinitos (no finitos) son Infinity, -Infinity o NaN-->
+    <!--Como parámetro el valor requerido a probar y devuelve un booleano 
+        false si el valor es Infinity, -Infinity o NaN.
+        Por lo demás cierto.-->
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The isFinite() Method</h2>
+
+    <p>isFinite() devuelve false si un valor es Infinity, -Infinity o NaN; de lo contrario, true.</p>
+    <p id="demo"></p>
+
+    <script>
+        let result = isFinite(123);
+        document.getElementById("demo").innerHTML = result;
+    </script>
+     <h1>JavaScript Global Methods</h1>
+     <h2>The isFinite() Method</h2>
+ 
+     <p>isFinite() devuelve false si un valor es Infinity, -Infinity o NaN; de lo contrario, true.</p>
+     <p id="demo2"></p>
+ 
+     <script>
+         let resultado = isFinite("123");
+         document.getElementById("demo2").innerHTML = resultado;
+     </script>
+  <!--Diferencia entre isFinite() y Number.isFinite()
+    isFinite() devuelve verdadero si un valor es un número finito.
+    Number.isFinite() devuelve verdadero si un número es un número finito.
+    En otras palabras:
+    isFinite() convierte el valor en un número antes de probarlo.-->
+    <!--devuelve true-->
+    <h1>JavaScript Global Methods</h1>
+    <h2>The isFinite() Method</h2>
+
+    <p id="demo3"></p>
+
+    <script>
+        document.getElementById("demo3").innerHTML = isFinite(123);
+    </script>
+    <!--devuelve false-->
+    <h1>JavaScript Numbers</h1>
+    <h2>The Number.isFinite() Method</h2>
+    
+    <p id="demo4"></p>
+    <p>Number.isFinite() no es compatible con Internet Explorer 11 (o anterior).</p>
+    
+    <script>
+    document.getElementById("demo4").innerHTML = Number.isFinite("123");
+    </script>
+   
+</body>
+</html>

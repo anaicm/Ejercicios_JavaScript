@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EncodeURI</title>
+     <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+     <!--Este método codifica una URI-->
+     <!--El método encodeURI() no codifica caracteres como:
+        , /? : @ & = + $ * #
+        Utilice el método encodeURIComponent() en su lugar.-->
+    <!--Sintaxis encodeURI(uri)-->
+    <!--El valor que entra es la URI a codificar-->
+    <!--Devuelve un String codificado-->
+    <!--Descripción. let te permite declarar variables limitando su alcance (scope) al bloque, 
+        declaración, o expresión donde se está usando. 
+        a diferencia de la palabra clave var la cual define una variable 
+        global o local en una función sin importar el ámbito del bloque.-->
+    <!--Podemos usar innerHTML para recuperar el contenido actual de un 
+        contenedor o insertar nuevo contenido en ese contenedor. 
+        Por contenedor entendemos aquello que está entre las cláusulas < div > y < /div >.
+        cambia el texto que esta en la etiqueta <p> como ejemplo es ggg y luego lo actualiza 
+        con la URI codificada, con el aler se puede ver-->
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The encodeURI() Method</h2>
+
+    <p id="demo">gggg</p>
+
+<script>
+alert(document.getElementById("demo").innerHTML);
+let uri = "my test.asp?name=ståle&car=saab";
+let encoded = encodeURI(uri);
+
+document.getElementById("demo").innerHTML = encoded;
+</script>
+   
+</body>
+</html>

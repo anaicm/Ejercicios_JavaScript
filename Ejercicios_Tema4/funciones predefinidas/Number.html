@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Number</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso
+        El método Number() convierte un valor en un número.
+        Si el valor no se puede convertir, se devuelve NaN.-->
+    <!--notas
+        Para booleanos, Number() devuelve 0 o 1.
+        Para fechas, Number() devuelve milisegundos desde el 1 de enero de 1970 00:00:00.
+        Para cadenas, Number() devuelve un número o NaN.-->
+    <!--como parámetro le entra un valor Opcional. Un valor JavaScript (variable).-->
+    <!--Devuelve Un número, Devuelve el valor como un número.
+        Si el valor no se puede convertir en un número, se devuelve NaN.
+        Si no se proporciona ningún valor, se devuelve 0.-->
+    
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The Number() Method</h2>
+    <p>Number() convierte un valor en un número si es posible:</p>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+        Number(true) + "<br>" + 
+        Number(false) + "<br>" + 
+        Number(new Date());
+    </script>
+  
+    <h1>JavaScript Global Methods</h1>
+    <h2>The Number() Method</h2>
+    <p>Number() convierte un valor en un número si es posible:</p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML =
+        Number(999) + "<br>" + 
+        Number("999") + "<br>" + 
+        Number("999 888");
+  </script>
+
+    <h1>JavaScript Global Methods</h1>
+    <h2>The Number() Method</h2>
+    <p>Number() convierte un valor en un número si es posible:</p>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML =
+        Number([9]) + "<br>" + 
+        Number([9.9]) + "<br>" + 
+        Number([9,9]);
+</script>
+</body>
+</html>

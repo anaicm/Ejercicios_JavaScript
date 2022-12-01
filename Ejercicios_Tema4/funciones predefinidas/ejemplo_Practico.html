@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejemplo práctico1</title>
+    <!--¿Serías capaz de solicitar la edad
+        del usuario y comprobar si su respuesta es de tipo
+        numérico?-->
+
+</head>
+<body>
+<h1>Comprobar si la edad es un número</h1>
+<p id="verdad">la edad no es un número</p>
+<p id="falso">la edad es un número</p>
+<script>
+    var edad=prompt("¿Cuál es tu edad?");
+    //si no es NaN es porque es un número (isNaN es porque es una cadena)
+    //parsea y devuelve true
+    if (!isNaN(edad)){
+        edad=parseInt(edad);
+        document.getElementById("verdad").innerHTML = "True: " + edad;
+    }else{
+        document.getElementById("falso").innerHTML = "False: " + edad;
+    }
+</script>
+
+</body>
+</html>

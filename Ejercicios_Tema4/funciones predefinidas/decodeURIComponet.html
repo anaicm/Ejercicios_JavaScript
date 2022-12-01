@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>decodeURIComponet</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--El método descodifica al componente URI-->
+    <!--Usa el método encodeURIcomponet()para codificar-->
+    <!--El parámetro que entra es una URI codificada y desvuelve un String con la URI-->
+    
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The decodeURIComponent() Method</h2>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let uri = "https://w3schools.com/my test.asp?name=ståle&car=saab";
+    let encoded = encodeURIComponent(uri);
+    let decoded = decodeURIComponent(encoded);
+    
+    document.getElementById("demo").innerHTML = "Encoded URI:<br>" + encoded + "<br><br>" + "Decoded URI:<br>" + decoded;
+    </script>
+</body>
+</html>

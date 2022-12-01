@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>String</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso
+        El método String() convierte un valor en una cadena.-->
+    <!--Nota
+        El método String() devuelve lo mismo que el método toString() para cualquier valor.-->
+    <!--como parámetro requiere un valor de javaScript-->
+    <!--Devuelve un valor convertido en una cadena-->
+   
+    
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The String() Method</h2>
+    <p>String() convierte un valor en una cadena:</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML =
+        String(new Date()) + "<br>" +
+        String("12345") + "<br>" +
+        String(12345);
+    </script>
+
+    <h1>JavaScript Global Methods</h1>
+    <h2>The String() Method</h2>
+    <p>String() convierte un valor en una cadena:</p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML =
+        String(Boolean(0)) + "<br>" +
+        String(Boolean(1)) + "<br>" +
+        String([1,2,3,4]);
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>isNaN/</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso
+        En JavaScript, NaN es la abreviatura de "Not-a-Number".
+        El método isNaN() devuelve verdadero si un valor es NaN.
+        El método isNaN() convierte el valor en un número antes de probarlo.-->
+    <!--Por parámetro le entra el valor a probar y devuelve verdadero 
+        si el valor es NaN (no es un número); de lo contrario, falso-->
+   
+    
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2> The isNaN() Method</h2>
+    <p>IsNaN () devuelve verdadero si un valor es NaN:</p>
+    <p id="demo"></p>
+    <script>
+        let resultado =
+        "Is 123 NaN? " + isNaN(123) + "<br>" +
+        "Is -1.23 NaN? " + isNaN(-1.23) + "<br>" +
+        "Is 5-2 NaN? " + isNaN(5-2) + "<br>" +
+        "Is 0 NaN? " + isNaN(0);
+        document.getElementById("demo").innerHTML = resultado;
+    </script>
+
+    <h1>JavaScript Global Methods</h1>
+    <h2>The isNaN() Method</h2>
+    <p>IsNaN () devuelve verdadero si un valor es NaN: </p>
+    <p id="demo2"></p>
+    <script>
+        let resultado1 =
+        "Is '123' NaN? " + isNaN('123') + "<br>" +
+        "Is 'Hello' NaN? " + isNaN('Hello') + "<br>" +
+        "Is '2005/12/12' NaN? " + isNaN('2005/12/12');
+        document.getElementById("demo2").innerHTML = resultado1;
+    </script>
+<!--Diferencia entre isnan() y Number.isnan()
+    El método isNaN() devuelve verdadero si un valor no es un número.
+    Number.isNaN() devuelve verdadero si un número no es un número.
+    En otras palabras:
+    isNaN() convierte el valor en un número antes de probarlo.-->
+
+    <!--devuelve verdadero-->
+    <h1>JavaScript Global Methods</h1>
+    <h2>The isNaN() Method</h2>
+    <p>Is "Hello" NaN?</p>
+    <p id="demo3"></p>
+    <script>
+        let text = "Hello";
+        document.getElementById("demo3").innerHTML = isNaN(text);
+    </script>
+
+    <!--devuelve verdadero-->
+    <h1>JavaScript Numbers</h1>
+    <h2>The Number.isNaN() Method</h2>
+    <p>Is "Hello" NaN?</p>
+    <p id="demo5"></p>
+    <p>Number.isNaN() no es compatible con Internet Explorer 11 o anterior.</p>
+    <script>
+        let text1 = "Hello";
+        document.getElementById("demo5").innerHTML = Number.isNaN(text1);
+    </script>
+
+</body>
+</html>

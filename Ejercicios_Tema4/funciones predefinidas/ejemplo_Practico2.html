@@ -1,0 +1,23 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejemplo práctico2</title>
+    <!--. ¿Serías capaz de solicitar la altura
+        en metros del usuario y parsear dicha respuesta?-->
+</head>
+<body>
+<h1>Parsear la altura</h1>
+<p id="altura"></p>
+
+<script>
+    var altura=prompt("¿Cuál es tú altura en metros");
+    altura=parseFloat(altura);
+  
+        document.getElementById("altura").innerHTML = "la altura es: " + altura;
+  
+</script>
+
+</body>
+</html>

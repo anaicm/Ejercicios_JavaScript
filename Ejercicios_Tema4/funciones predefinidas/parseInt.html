@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>parseInt</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso
+        El método parseInt analiza un valor como una cadena y devuelve el primer entero.
+        Un parámetro radix especifica el sistema numérico a utilizar:
+        2 = binario, 8 = octal, 10 = decimal, 16 = hexadecimal.
+        Si se omite radix, JavaScript asume radix 10. Si el valor comienza con "0x", JavaScript asume radix 16.-->
+    <!--notas
+        Si el primer carácter no se puede convertir, se devuelve NaN.
+        Los espacios iniciales y finales se ignoran.
+        Solo se devuelve el primer entero encontrado.
+        Los navegadores más antiguos devolverán 8 para parseInt("010"). 
+        Las versiones anteriores de ECMAScript usaban octal (base 8) para valores que comenzaban con "0".
+        A partir de ECMAScript 5 (2009), el valor predeterminado es decimal (base 10).-->
+    <!--como parámetros le entran dos (requerido, opcional)(valor a analizar, El valor predeterminado es 10.
+        Un número (2 a 36) que especifica el sistema numérico.valor que se va a analizar.)-->
+    <!--Devuelve un número NaN si no se encuentra ningún número entero.-->
+   
+    
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The parseInt() Method</h2>
+    <p>parseInt() analiza una cadena y devuelve el primer entero:</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML =
+        parseInt("10") + "<br>" +
+        parseInt("10.00") + "<br>" +
+        parseInt("10.33") + "<br>" +
+        parseInt("34 45 66") + "<br>" +
+        parseInt("   60   ") + "<br>" +
+        parseInt("40 years") + "<br>" +
+        parseInt("He was 40");
+    </script>
+
+    <h1>JavaScript Global Methods</h1>
+    <h2>The parseInt() Method</h2>
+    <p>parseInt() analiza una cadena y devuelve el primer entero:</p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML =
+        parseInt("10", 10)+ "<br>" +
+        parseInt("010")+ "<br>" +
+        parseInt("10", 8)+ "<br>" +
+        parseInt("0x10")+ "<br>" +
+        parseInt("10", 16);
+    </script>
+  
+</body>
+</html>

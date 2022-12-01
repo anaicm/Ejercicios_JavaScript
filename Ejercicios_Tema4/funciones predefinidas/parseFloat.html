@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>parseFloat</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso
+        El método parseFloat() analiza un valor como una cadena y devuelve el primer número.-->
+    <!--notas
+        Si el primer carácter no se puede convertir, se devuelve NaN.
+        Los espacios iniciales y finales se ignoran.
+        Solo se devuelve el primer número encontrado.-->
+    <!--como parámetro le entra un valor a analizar-->
+    <!--Devuelve un número NaN si no se encuentra ningún número-->
+   
+    
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The parseFloat() Method</h2>
+    <p>parseFloat() analiza una cadena y devuelve el primer número:</p>
+    <p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML =
+        parseFloat(10) + "<br>" +
+        parseFloat("10") + "<br>" +
+        parseFloat("10.33") + "<br>" +
+        parseFloat("34 45 66") + "<br>" +
+        parseFloat("He was 40");
+    </script>
+
+    <h1>JavaScript Global Methods</h1>
+    <h2>The parseFloat() Method</h2>
+    <p>parseFloat() analiza una cadena y devuelve el primer número:</p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML =
+        parseFloat("40.00") + "<br>" +
+        parseFloat("   40   ") + "<br>" +
+        parseFloat("40 years") + "<br>" +
+        parseFloat("40H") + "<br>" +
+        parseFloat("H40");
+    </script>
+  
+</body>
+</html>

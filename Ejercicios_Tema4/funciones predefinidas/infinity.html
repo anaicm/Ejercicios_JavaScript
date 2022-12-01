@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Infinity</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--Definición y uso
+        El infinito es un número que representa el infinito positivo.
+        -Infinito representa infinito negativo.
+        Un número alcanza el infinito cuando supera el límite superior de un número:
+        1.797693134862315E+308.
+        Un número alcanza el -Infinito cuando supera el límite inferior de un número:
+        -1.797693134862316E+308.-->
+    <!--retrona un valor infinito-->
+ 
+    
+</head>
+<body>
+<!--Limite positivo-->
+    <h1>JavaScript Global Properties</h1>
+    <h2>The Infinity Property</h2>
+    
+    <p>1.797693134862315E+308 es el límite de un número de JavaScript:</p>
+    <p id="demo"></p>
+    
+        <script>
+            let x = 1.797693134862315E+308;
+            let y = x * 1.001;
+    
+            document.getElementById("demo").innerHTML = y;
+    </script> 
+<!--Limite negativo-->
+    <h1>JavaScript Global Properties</h1>
+    <h2>The -Infinity Property</h2>
+
+    <p>-1.797693134862316E+308 es el límite negativo de un número de JavaScript:</p>
+    <p id="demo2"></p>
+
+        <script>
+            let a = -1.797693134862316E+308;
+            let b = x * 1.001;
+
+            document.getElementById("demo2").innerHTML = b;
+        </script>
+</body>
+</html>

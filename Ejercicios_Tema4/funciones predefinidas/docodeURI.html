@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>decodeURI</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--El método decodeURI() decodifica un URI.-->
+    <!--Usar el método encodeURI() para codificar un URI-->
+    <!--Como parametro le entra la URI a descodificar-->
+    <!--Devuelve un String-->
+</head>
+<body>
+<h1>JavaScript Global Methods</h1>
+<h2>The decodeURI() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+let uri = "my test.asp?name=ståle&car=saab";
+let encoded = encodeURI(uri);
+let decoded = decodeURI(encoded);
+
+document.getElementById("demo").innerHTML = "Encoded URI:<br>" + encoded + "<br><br>" + "Decoded URI:<br>" + decoded;
+</script>
+
+</body>
+</html>

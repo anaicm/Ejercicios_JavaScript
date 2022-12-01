@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>encodeURIComponet</title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_global.asp*/-->
+    <!--El método codifica un componente URI-->
+    <!--El método codifica caracteres especiales, incluidos: , /? : @ & = + $ #-->
+    <!--Usa la funcion decodeURIcomponet para descodificar-->
+    <!--Como parámetro le entra una URI y la devuelve codificada-->
+    
+</head>
+<body>
+    <h1>JavaScript Global Methods</h1>
+    <h2>The encodeURIComponent() Method</h2>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let uri = "https://w3schools.com/my test.asp?name=ståle&car=saab";
+    let encoded = encodeURIComponent(uri);
+    
+    document.getElementById("demo").innerHTML = encoded;
+    </script>
+</body>
+</html>
