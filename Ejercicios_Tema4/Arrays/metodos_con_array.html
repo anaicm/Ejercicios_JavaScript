@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>métodos con array</title>
+    <!-- -->
+    <!--push()añade un elemento al final del array-->
+    <!--pop() elimina el ultimo elemento del array-->
+    <!--indexoF() muestra el indice del elemento-->
+    <!--concat() selecciona un array y lo concatena con otros elementos de un nuevo array -->
+    <!--join() concatena los elementos de un array en una sola cadena separada por un caracter opcional -->
+    <!--reverse() invierte el orden de los elementos de un array-->
+    <!--unshift() añade elementos al inicio de un array y devuelve el número de elementos del array modificado -->
+    <!--shift() elimina el primer elemento de un array -->
+    <!--slice() devuelve un nuevo array con un subconjunto de los elementos del array que ha usado el método -->
+    <!--sort() ordena alfabeticamento los elementos de un array -->
+    <!--splice() elimina, sustituye o añade elementos del array dependiendo de los argumentos del método -->
+</head>
+<body>
+    <script type="text/javascript">
+        //arrays
+        var fruta=["Manzana","Pera","Sandia"];
+        var comida=new Array("Arroz","Pasta","Carne","Postres");
+        //elemento
+        for (var i = 0; i < fruta.length; i++) {
+            document.write("La fruta de la posicion "+i+" es: "+fruta[i]+"<br>");
+        }
+        document.write("La comida de la posicion "+2+" es: "+comida[2]+"<br>");
+        comida[2]="Helado";
+        document.write("La comida de la posicion "+2+" es: "+comida[2]+"<br>");
+        //Propiedades
+        document.write("El array comida tiene una longitud de; "+comida.length+"<br>");
+        comida.push("Desayunos");
+        document.write("El array comida tiene una longitud de; "+comida.length+"<br>");
+        document.write("La comida de la posicion "+(comida.length-1)+" es: "+comida[comida.length-1]+"<br>");
+        document.write("El indice dentro de comida del elemento Pasta seria "+comida.indexOf("Pasta")+"<br>");
+    </script>
+
+
+</body>
+</html>

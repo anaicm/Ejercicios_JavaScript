@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Almacenar elementos en un array</title>
+    <!-- ¿Serías capaz crear un nuevo array para almacenar los
+        alumnos de una clase?
+    -->
+    <!--push()añade un elemento al final del array-->
+    <!--pop() elimina el ultimo elemento del array-->
+    <script>
+        var alumnos=new Array();
+        var nombre="";
+
+        while(nombre != "salir"){
+            nombre=prompt("Introduce nombre (escriba salir para finalizar)");
+            alumnos.push(nombre);
+            
+        }
+        alumnos.pop();
+        for(var i=0; i<alumnos.length;i++){
+            document.write(alumnos[i] + "<br>");
+        } 
+        
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

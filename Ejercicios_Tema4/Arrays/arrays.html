@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Crear y recorrer un array</title>
+    <!---->
+
+</head>
+<body>
+<!--Hay dos formas de declarar un array-->
+    <script type="text/javascript">
+        var fruta=["Manzana","Pera","Sandia"];
+        var comida=new Array("Arroz","Pasta","Carne");
+    </script>
+<!--Para ver el contenido de un array-->
+<!--console.log() muestra por consola, no lo muestra por el navegador--> 
+<!--i es el indice, el primer indice de los arrays es cero-->   
+<!--array.length da la longitud del array--> 
+    <script type="text/javascript">
+        for (var i = 0; i < fruta.length; i++) {
+            
+            console.log("La fruta de la posicion "+i+" es: "+fruta[i]);
+        }
+        console.log("La comida de la posicion "+2+" es: "+comida[2]);
+    </script>
+
+
+   
+</body>
+</html>

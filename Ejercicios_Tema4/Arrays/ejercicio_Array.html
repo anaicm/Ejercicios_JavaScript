@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Almacenar elementos en un array</title>
+    <!--Queremos realizar un pequeño programa con JavaScript que nos muestre los alumnos que han
+        llegado a clase de forma ordenada:
+        1) Generaremos un nuevo array denominado alumnos
+        2) Mediante la función prompt solicitaremos el nombre del alumno conforme llegue a clase
+            a. Mediante la función if y while seguiremos preguntando nombres de alumnos hasta
+                que se introduzca la sentencia de finalización que definamos.
+            b. Mediante push añadiremos un nuevo alumno al array
+        3) Mediante la función sort ordenaremos el array de alumnos
+        4) Mediante la estructura for recorreremos el array y mostraremos el contenido del array de forma
+            ordenada.
+    -->
+   
+    <script>
+        var alumnos=new Array();
+        var nombre="";
+
+        while(nombre != "salir"){
+            nombre=prompt("Introduce nombre (escriba salir para finalizar)");
+            alumnos.push(nombre);
+            
+        }
+        alumnos.pop();
+        alumnos.sort();
+        for(var i=0; i<alumnos.length;i++){
+            document.write(alumnos[i] + "<br>");
+        } 
+        
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>
