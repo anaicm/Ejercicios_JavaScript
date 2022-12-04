@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Creacion de métodos </title>
+    <!---->
+  
+</head>
+<body>
+<!--Los métodos de la clase "Zapateria" son funciones que se guardan dentro de una propiedad-->
+<!--Los valores le pueden entrar por parámetro-->
+<script type="text/javascript">
+    function Zapateria(){
+        this.numero=35;
+        this.cambioNumero=function(numero){
+        if (isNaN(numero)) {
+            console.log("Te has equivocado");
+        }else{
+            this.numero=numero;
+            
+        }   
+    }
+    this.cambioColor=function(color){
+        if(color=="Azul"||color=="Negro"||color=="Amarillo"){
+            console.log("No estan disponibles");
+        }else{
+            this.color=color;
+        }
+    }
+}    
+    var zapato=new Zapateria();
+//Para llamar al método se llama a la propiedad que guarda el método
+    zapato.cambioNumero(40);//realiza el cambio
+    console.log("El nuevo número es: " + zapato.numero);
+    zapato.cambioNumero("aaaa");//te has esquivocado
+//
+ //los métodos se pueden realizar fuera de la clase, pero es mejor pasarlos dentro
+//para hacerlo fuera se usa el objeto"zapato"para crear la propiedad, dentro de la clase se usa this.
+/*  zapato.cambioColor=function(color){
+        if(color=="Azul"||color=="Negro"||color=="Amarillo"){
+            console.log("No estan disponibles");
+        }else{
+            this.color=color;
+        }
+    }*/
+    zapato.cambioColor("Rosa");//realiza el cambio
+    console.log("El nuevo color es: " + zapato.color);
+    zapato.cambioColor("Azul");//no esta disponible
+</script>
+       
+       
+</body>
+</html>

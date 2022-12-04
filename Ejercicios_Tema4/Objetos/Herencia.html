@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Herencia de objetos</title>
+    <!--con var objeto2=object.create(objeto1) todas las propiedades del objeto1 pasan a ser tambien del objeto2,
+        es decir las hereda. -->
+    <!--Si el objeto1 cambia alguna propiedad, directamente se cambia tambien en objeto2 que la hereda-->
+</head>
+<body>
+  <script>
+    var departamento={
+        nombre:"infomática",
+        numero_Empleados:34,
+        imprime_Nombre:function(){//función que realiza una cadena texto con el nombre y devuelve este para usarlo en otras ocasiones
+            texto="El nombre del departamento es: "+this.nombre;
+            console.log(texto);
+            return texto;
+        }
+    }
+    departamento.imprime_Nombre();
+    var oficina=Object.create(departamento);
+
+    //creo un nuevo objeto "empleado" que va a tener como prototipo el objeto "oficina", es decir hereda todas las propiedades del 
+    //objeto "oficina" que este a su vez hereda las propiedades del objeto "departamento"
+    var empleado=Object.create(oficina);
+    //en una variable guardo como el objeto "empleado" llama la propiedad nombre del objeto "departamento"
+    var nom_departamento=empleado.nombre;
+    console.log(nom_departamento);//como se puede comprobarse puede usar perfectamente la propiedad "nombre" en el objeto "empleado"    
+    //funcion para el objeto "empleado", que coge la propiedad "numero_empleados" del objeto "departamento"
+        empleado.impimir_compañeros=function(){
+        texto="El número de departamento es: "+this.numero_Empleados;
+            console.log(texto);
+            return texto;
+    }
+
+    //a la vez el objeto "empleado" puede tener otro objeto hijo "compañero", este hereda las propiedades del
+    //objeto "departamento" y las del objeto "empleado", se pueden hacer más.
+    var compañero=Object.create(empleado);
+
+
+    //Los dos objeto pueden llamar siempre que deriven unos de otros
+    empleado.impimir_compañeros();
+    compañero.impimir_compañeros();
+    //pero si el objeto "oficina" intenta llamar a una propiedad del objeto "empleado", este no funciona, 
+    //ya que el objeto "empleado" es creado después y oficina no hereda lo del objeto "empleado" ni el 
+    //objeto "compañero"
+    oficina.impimir_compañeros();//da error.
+  </script>
+       
+       
+</body>
+</html>

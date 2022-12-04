@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Definiendo métodos de forma literar</title>
+    <!---->
+</head>
+<body>
+    <script type="text/javascript">
+    //el objeto se crea como si fuera un estilo en CSS
+    var zapato={
+        color:"Verde",
+        numero:30
+    };
+    //los metodos se crea con el nombre del objeto"zapato".propiedad=a function
+    //pueden entrar parámetros o no
+    zapato.cambioNumero=function(numero){
+        if (isNaN(numero)) {
+            console.log("Te has equivocado en el número");
+        }else{
+            this.numero=numero;
+        }
+    }
+    zapato.cambioColor=function(color){
+        if(color=="Azul"||color=="Negro"||color=="Amarillo"){
+            console.log("No estan disponibles");
+        }else{
+            this.color=color;
+        }
+    }
+    zapato.cambioNumero(40);
+    console.log("El número es: " + zapato.numero);
+    zapato.cambioNumero("AAAA");
+    zapato.cambioColor("Rosa");
+    console.log("El color es; " + zapato.color);
+    zapato.cambioColor("Azul");
+
+    </script>
+       
+       
+</body>
+</html>

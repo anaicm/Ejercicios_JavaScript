@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Definiendo objetos</title>
+    <!--Los objetos es como si se crea un constructor de una clase, 
+    por eso para crear un objeto se utiliza new está llamando al constructor.-->
+</head>
+<body>
+    <!--creacion de objeto con funciones-->
+    <!--con la función se declara el objeto y dentro de esta están las propiedades del objeto-->
+    <script type="text/javascript">
+        function Manzana(tipo){
+        this.tipo = tipo;
+        this.color="roja";
+        this.numero="4";
+        }
+        var golden= new Manzana("Golden");
+        console.log("El objeto Manzana es de tipo "+golden.tipo);
+        console.log("El objeto Manzana es de color "+golden.color);
+        console.log("La cantidad del objeto manzana es: "+golden.numero);
+    //se pueden declarar mas propiedades fuera de la función
+        golden.tamaño="Grande";
+        console.log("El tamaño del objeto Manzana: "+golden.tamaño);
+    //el valor le puede entrar por parametro a la hora de crear el objeto
+        function Manzana2(tipo,color,numero){
+        this.tipo = tipo;
+        this.color=color;
+        this.numero=numero;
+        }
+        var ambrosia=new Manzana2("ambrosia","verde","6");
+    //para acceder a las propiedades se puede realizar mediante el punto 
+        console.log("El objeto Manzana es de tipo "+ambrosia.tipo);
+        console.log("El objeto Manzana es de color "+ambrosia.color);
+    //o mediante corchetes y entre comillas la propiedad
+        console.log("La cantidad del objeto manzana es: "+ambrosia["numero"]);
+    </script>
+       
+</body>
+</html>

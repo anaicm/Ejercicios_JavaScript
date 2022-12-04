@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 1</title>
+    <!--Necesitamos generar un objeto para poder lanzar un dado de 6 números de forma aleatoria y almacenar la
+        secuencia de dados lanzados en un array.
+            1) Generamos un nuevo objeto denominado Dado
+            2) Dentro del objeto generamos una nueva propiedad que es un array denominada secuencia
+            3) Generaremos una nueva función que se denomina tirarDado:
+                a. En primer lugar mediante la función random del objeto Math, generamos un
+                    número del 1 al 6
+                b. En segundo lugar mediante la función push, almacenaremos el numero en el array
+                c. Mediante alert mostramos el numero random generado
+            4) Generaremos una nueva función denominada mostrarSecuencia que recorre el array
+                secuencia y muestra todos los números generados
+    -->
+</head>
+<body>
+    <script type="text/javascript">
+        var dado={
+            secuencia_dados:new Array(),
+        
+        };
+    //funcion que genera un número aleatorio entre el 1 y el 6
+        dado.numero_aleatorio=function random(min, max) {
+            return Math.round (Math.floor((Math.random() * (max - min + 1)) + min));
+        }
+    //funcion para guardar el número en el array
+
+        dado.tirarDado=function(){            
+           for(var i=0;i<10;i++){
+                var numeroAleatorioGenerado=dado.numero_aleatorio(1,6);  
+                dado.secuencia_dados.push(numeroAleatorioGenerado);
+            }   
+        }
+       
+    //funcion para mostrar la secuencia de números
+        dado.mostrarSecuencia=function(){
+            for(var i=0;i<dado.secuencia_dados.length;i++){
+                document.write(dado.secuencia_dados[i] + "<br>");
+            }
+        }
+        dado.tirarDado();//tira el dado para generar la secuencia
+        dado.mostrarSecuencia();//muestra la secuencia
+    //se puede realizar todo en un mismo método
+        /*dado.tirarDado2=function(){            
+           for(var i=0;i<10;i++){
+                var numeroAleatorioGenerado=dado.numero_aleatorio(1,6);  
+                dado.secuencia_dados.push(numeroAleatorioGenerado);
+                document.write(dado.secuencia_dados[i] + "<br>");
+            }   
+        }
+        dado.tirarDado2();*/
+        
+    </script>
+       
+       
+</body>
+</html>

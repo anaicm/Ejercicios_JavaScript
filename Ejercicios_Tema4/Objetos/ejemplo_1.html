@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejemplo 1</title>
+    <!--¿Serías capaz de generar un objeto que simule un jugador de un juego con las propiedades
+        nombre, puntos y nivel? -->
+</head>
+<body>
+    <script type="text/javascript">
+        function jugador(nombre,puntos,nivel){
+            this.nombre=nombre;
+            this.puntos=puntos;
+            this.nivel=nivel;
+        }
+        var jugador_1=new jugador("PEPE","535","Superior");
+        console.log("El nombre del jugador es: "+jugador_1.nombre);
+        console.log("El jugador tiene " + jugador_1.puntos+ " puntos");
+        console.log("El jugador tiene un nivel" + jugador_1.nivel);
+    </script>
+       
+       
+</body>
+</html>
