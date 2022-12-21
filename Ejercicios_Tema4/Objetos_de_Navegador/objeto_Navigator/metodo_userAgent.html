@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objeto userAgent </title>
+    <!--https://www.w3schools.com/jsref/obj_navigator.asp-->
+    <!---->
+    <!--userAgent() devuelve una información completa sobre el agente del usuario, el cual es normalmente navegador--> 
+  <style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+
+<h1>El objeto del navegador de ventanas</h1>
+<h2>La propiedad del agente de usuario</h2>
+<p id="demo" class="resultado"></p>
+
+<script>
+    let agent = navigator.userAgent;
+    document.getElementById("demo").innerHTML = "Agente de usuario:<br>" + agent;
+</script>
+
+
+
+</body>
+</html>

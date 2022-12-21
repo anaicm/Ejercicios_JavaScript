@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 4</title>
+    <!--Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. 
+        Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión.-->
+<style>
+   .texto{
+        color: green;
+        font-size: 24px;
+    }
+    #contenedor{
+        background-color: aquamarine;
+        margin-right: 1000px;
+
+    }
+</style>
+<script>
+     var cadena=new Array();
+    function continuar(){
+        concatenar();
+        document.getElementById("palabra").value="";
+
+    }
+    function cancelar(){
+        concatenar();
+        document.getElementById("palabra").value;
+    
+        document.write("La cadena concatenada es: <br>"+cadena.join("-"));
+        /*for(var i=0;i<cadena.length;i++){
+            if(i<cadena.length-1){
+                document.write(cadena[i] + "-");
+            }else{
+                document.write(cadena[i]);
+            }
+       
+        }*/
+    }
+    function concatenar(){
+        var palabra=document.getElementById("palabra").value;
+         if(isNaN(palabra)){
+            cadena.push(palabra);
+        }else{
+            alert("No es una palabra")
+        }
+    }
+ 
+ 
+</script>
+</head>
+<body>
+<div id="contenedor">
+<h1>palabras</h1>
+</div>
+<p class="texto">Continua para introducir más palabras al <br>pulsa cancelar, mostrará todas las palabras<br>
+    concatenadas con un guión.</p>
+<table>
+    <tr>
+        <td><lable>Introduce palabras: <input type="text" name="palabra" id="palabra" value=""/> </lable></td>
+        
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><input type="button" name="cancelar" id="boton" value="cancelar" onclick="cancelar();"/></td>
+        <td><input type="submit" name="continuar" id="boton2" value="continuar" onclick="continuar();"/></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objeto chartCodeAt() </title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_string.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String-->
+    <!---->
+    <!--chartCodeAt () devuelve un caracter en concreto en su formato unicode-->
+    <!--Definición y uso
+        El charCodeAt()método devuelve el Unicode del carácter en un índice especificado (posición) en una cadena.
+        El índice del primer carácter es 0, el segundo es 1, ....
+        El índice del último carácter es la longitud de la cadena: 1 (consulte los ejemplos a continuación).-->
+    <!--charCodeAt() frente a codePointAt() charCodeAt()es UTF-16, codePointAt() es Unicode.
+        charCodeAt()devuelve un número entre 0 y 65535.
+        Ambos métodos devuelven un número entero que representa el código UTF-16 de un carácter,
+        pero solo codePointAt()pueden devolver el valor completo de un valor Unicode mayor que 0xFFFF (65535).
+        Para obtener más información acerca de los juegos de caracteres Unicode, visite nuestra referencia de Unicode .-->
+    <!--parámetro Optional. A number.The index (position) of a character.Default value = 0.-->
+    <!--Un número	Unicode del carácter en el índice especificado. NaN si el índice no es válido.-->
+<style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>Cadenas JavaScript</h1>
+    <h2>El método charCodeAt()</h2>
+    
+    <p>charCodeAt() devuelve el Unicode del carácter en una posición específica en una cadena.</p>
+    <p>Obtenga el Unicode del segundo carácter:</p>
+    <p id="demo" class="resultado"></p>
+    <script>
+        let text = "HELLO WORLD";
+        let code = text.charCodeAt(2);
+        document.getElementById("demo").innerHTML = code;
+    </script>
+
+
+</body>
+</html>

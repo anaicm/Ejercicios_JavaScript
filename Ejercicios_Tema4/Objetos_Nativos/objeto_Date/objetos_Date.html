@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objetos Date </title>
+    <!--https://www.w3schools.com/jsref/jsref_getday.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date-->
+  
+</head>
+<body>
+
+<script type="text/javascript">
+//se crea un objeto de tipo date
+    var fecha=new Date();
+    var fecha2=new Date('December 17, 1995 03:24:00');
+//devuelve la fecha y hora actual   
+    console.log(fecha);
+//devuelve la fecha y hora introducida por parámetro
+    console.log(fecha2);
+// distintas formas de crear un objeto date
+    let birthday1 = new Date('1995-12-17T03:24:00')
+    let birthday2 = new Date(1995, 11, 17)            // el mes es indexado como 0
+    let birthday3 = new Date(1995, 11, 17, 3, 24, 0)
+    let birthday4 = new Date(628021800000)            // pasando la marca temporal de la época
+// get consultas
+    console.log(fecha.getDay());    //getDay() devuelve el dia de la semana, empezando el 0 el domingo y acabando 6 en sábado
+    console.log(fecha.getDate());    //getDate() devuelve el día del mes entre el 1 y el 31
+    console.log(fecha.getMonth());    //getMonth() devuelve el mes entre el 0 (enero) y 11(diciembre)
+    console.log(fecha.getFullYear()); //getFullYear() devuelve el año correspondiente.
+
+    console.log(fecha.getHours());  //getHours() devuelve la hora entre 0 y 23
+    console.log(fecha.getMinutes());    //getMinutes() devuelve los minutos entre 0 y 59
+    console.log(fecha.getSeconds());    //getSeconds() devuelve los minutos entre 0 y 59
+    console.log(fecha.getMilliseconds());  //getMilliseconds () devuelve los milisegundos entre 0 y 9999 
+    console.log(fecha.getTime()); //getTime() devuelve el número en milisegundos transcurridos desde el 1 de enero de 1970
+
+    console.log(fecha.getUTCDate());    //devuelve el número del día del mes, respecto al tiempor universal coordinado
+    console.log(fecha.getUTCDay());     //devuelve el número del día de la semana, respecto al tiempor universal coordinado
+    console.log(fecha.getUTCFullYear());    //devuelve el número del año, respecto al tiempor universal coordinado
+    console.log(fecha.getUTCHours());   //devuelve las horas, respecto al tiempor universal coordinado
+    console.log(fecha.getUTCMinutes()); //devuelve los minutos, respecto al tiempor universal coordinado
+
+//parse() analiza una cadena de fecha y devuelve el número de milisegundos desde la medianoche del 1 de enero de 1970.
+//Calcule el número de años entre el 21 de marzo de 2012 y el 1 de enero de 1970:  42
+    //console.log(fecha.parse("March 21, 2012")); 
+//set modificar
+    console.log(fecha2.setDate(12)); //establece el valor del dia del mes
+    console.log(fecha2.setMonth(4));  //establece el valor del mes 
+    console.log(fecha2.setFullYear(2022));   //establece el valor del año
+
+    console.log(fecha2.setHours(15));  //establece el valor de la hora
+    console.log(fecha2.setMinutes(17));    //establece el valor de los minutos 
+    console.log(fecha2.setSeconds(15));    //establece los segundos
+    console.log(fecha2.setMilliseconds(192));   //establece el valor de los milisegundos
+    console.log(fecha2); //muestra la modificacion de la fecha.
+</script>
+       
+       
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 5</title>
+    <!-- Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de indentidad).
+         El algoritmo para calcular la letra del dni es el siguiente :
+            ·  El número debe ser entre 0 y 99999999
+            ·  Debemos calcular el resto de la división entera entre el número y el número 23.
+            ·  Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes: 
+                 (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
+            ·  Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
+            ·  Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».-->
+<style>
+   .texto{
+        color: green;
+        font-size: 24px;
+    }
+    #contenedor{
+        background-color: aquamarine;
+        margin-right: 1000px;
+
+    }
+</style>
+<script>
+     var cadena=new Array();
+    function continuar(){
+        concatenar();
+        document.getElementById("palabra").value="";
+
+    }
+    function cancelar(){
+        concatenar();
+        document.getElementById("palabra").value;
+    
+        document.write(cadena.join("-"));
+        /*for(var i=0;i<cadena.length;i++){
+            if(i<cadena.length-1){
+                document.write(cadena[i] + "-");
+            }else{
+                document.write(cadena[i]);
+            }
+       
+        }*/
+    }
+    function concatenar(){
+        var palabra=document.getElementById("palabra").value;
+         if(isNaN(palabra)){
+            cadena.push(palabra);
+        }else{
+            alert("No es una palabra")
+        }
+    }
+ 
+ 
+</script>
+</head>
+<body>
+<div id="contenedor">
+<h1>palabras</h1>
+</div>
+<p class="texto">Continua para introducir más palabras al <br>pulsa cancelar, mostrará todas las palabras<br>
+    concatenadas con un guión.</p>
+<table>
+    <tr>
+        <td><lable>Introduce palabras: <input type="text" name="palabra" id="palabra" value=""/> </lable></td>
+        
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><input type="button" name="cancelar" id="boton" value="cancelar" onclick="cancelar();"/></td>
+        <td><input type="submit" name="continuar" id="boton2" value="continuar" onclick="continuar();"/></td>
+    </tr>
+</table>
+
+</body>
+</html>

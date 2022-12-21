@@ -1,0 +1,16 @@
+Se refiere a los documentos que se cargan en la ventana del navegador.
+Permite manipular las propiedades y el contenido de los principales
+elementos de las páginas web. Cuenta con una serie de sub-objetos como
+los vínculos, imágenes o formularios.
+Tal y como indica la documentación de mozilla, la interfaz Documento
+representa cualquier página web cargada en el navegador y sirve como
+punto de entrada en el contenido de la página web, que es el árbol DOM.
+
+Uno de los métodos más usados para poder escribir dentro de los
+documentos y por lo tanto interactuar de forma dinámica con el interfaz de
+nuestro cliente es el método write.
+
+Que el objeto document es uno de los más importantes dentro de los
+objetos nativos de JavaScript ya lo hemos comentado, pero si además
+añadimos que nos permite interactuar con con el DOM (Document Object
+Model) de nuestro documento cargado, entonces lo hace muy muy potente.

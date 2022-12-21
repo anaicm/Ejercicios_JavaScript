@@ -1,0 +1,7 @@
+El objeto Location corresponde a la URL de la página web en uso. Sus
+principales funciones son las de consultar las diferentes partes que forman
+una URL, como por ejemplo, el dominio, el protocolo o el puerto. De este
+modo, podemos extraer cada componente de la URL y trabajar con ellos de
+forma separada. Gracias a este objeto podemos recargar una página, carga
+una nueva página o reemplazar por otra.
+

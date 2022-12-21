@@ -1,0 +1,13 @@
+El objeto history almacena las referencias de todos los sitios web visitados.
+Estas referencias se guardan en una lista y sus propiedades y métodos se
+utilizan principalmente para que el usuario de una aplicación web pueda
+desplazarse para adelante y para atrás. Sin embargo, al ser una lista de
+referencias, no podemos acceder a los nombres de las direcciones URL
+visitadas ya que son información privada del usuario.
+
+propiedades:
+- current: Corresponde a la cadena que contiene la URL de la entrada actual del 
+del historial.
+- length: Corresponde al número de páginas que han sido visitadas.
+- next: Corresponde a la cadena que contiene la siguiente entrada del historial.
+- previous: Corresponde a la cadena que contiene la anterior entrada del historial.

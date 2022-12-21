@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio Práctico </title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_math.asp-->
+    <!--Queremos realizar una pequeña ampliación para un programa de enseñanza en alumnos de la ESO. En ese
+        programa queremos mostrar todos los resultados del seno, con un paso definido por el usuario:
+            1) Mediante promt, pediremos al usuario que introduzca el paso en grados que quiere utilizar
+            2) Mediante la estructura for y el objeto Math mostraremos el resultado:
+                a. Definiremos un bucle for con una paso igual al que nos ha definido el usuario y
+                    comenzando en 0º
+                b. Mostraremos por pantalla el resultado utilizando la función sin()-->
+                    
+
+  <style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+    var grados=prompt("Dime los grados: ");// los grados entran como texto
+    grados=parseInt(grados);
+//para usar grados primero hay que pasarlos a radianes   
+// radians = grados * PI / 180
+    function seno(grados){
+        var x = Math.sin(grados * Math.PI / 180);
+        return x.toFixed(2);   //toFised () redondea el número hacia arriba, es decir, 
+                              //si tenemos, por ejemplo 11.123, el valor resultante es 11.12
+    }
+    
+    for(var i=0;i<=360;i=i+grados){ //lo que tengo más grados
+        document.write(seno(i)+"<br>");
+
+    }
+ 
+  
+     
+  
+</script>     
+</body>
+</html>

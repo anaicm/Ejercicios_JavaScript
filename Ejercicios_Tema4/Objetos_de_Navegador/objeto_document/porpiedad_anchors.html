@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>propiedad document </title>
+    <!--https://www.w3schools.com/jsref/prop_win_document.asp-->
+    <!--https://developer.mozilla.org/en-US/docs/Web/API/Document-->
+    <!--Devaluado-->
+    <!--anchors corresponde a los puntos de anclajes (etiqueta< a name>)--> 
+  <style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+
+<h1>El objeto de la pantalla de la ventana</h1>
+<h2>La propiedad de altura de disponibilidad</h2>
+<a name="html">HTML Tutorial</a><br>
+<a name="css">CSS Tutorial</a><br>
+<a name="xml">XML Tutorial</a><br>
+
+<p>El número de anclas en este documento es:</p>
+<p id="demo"  class="resultado"></p> 
+
+<script>
+let num = document.anchors.length;
+document.getElementById("demo").innerHTML = num;  // dice el número de anclas del documento en este caso son tres.
+</script>
+<!---->
+<p>El contenido del primer ancla en este documento es</p>
+
+<p id="demo2" class="resultado"></p>
+
+<script>
+let content = document.anchors[0].innerHTML;
+document.getElementById("demo2").innerHTML = content;  //devuelve el ancla de la posición que corresponde al indice.
+</script>
+
+
+
+</body>
+</html>

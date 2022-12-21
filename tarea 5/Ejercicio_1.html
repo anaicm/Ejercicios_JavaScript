@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 1</title>
+    <!--Crea una web con html y JavaScript que te pida la edad, compruebe si es mayor de edad.-->
+<style>
+    .respuesta{
+        color: green;
+        font-size: 24px;
+    }
+    .respuesta2{
+        color: red;
+        font-size: 24px;
+    }
+    #contenedor{
+        background-color: aquamarine;
+        margin-right: 1100px;
+
+    }
+</style>
+  
+</head>
+<body>
+<div id="contenedor">
+<h1>¿Eres Mayor de edad?</h1>
+</div>
+<script>
+    var edad=prompt("¿Qué edad tienes");
+    if(edad>=18){
+        document.write("<p class='respuesta'>Si eres mayor de edad</p>");
+    }else{
+        document.write("<p class='respuesta2'>Aún no eres mayor de edad</p>");
+    }
+</script>
+</body>
+</html>

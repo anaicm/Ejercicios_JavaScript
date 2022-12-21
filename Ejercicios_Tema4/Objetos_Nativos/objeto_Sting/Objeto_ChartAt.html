@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objeto chartAt() </title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_string.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String-->
+    <!---->
+    <!--charAt() permite acceder a un caracter en concreto de una cadena-->
+    <!--Definición y uso
+        El charAt()método devuelve el carácter en un índice especificado (posición) en una cadena.  
+        El índice del primer carácter es 0, el segundo 1, ...-->
+    <!--parámetros 	Optional. The index (position) of the character. Default = 0.-->
+    <!--devuelve 	El carácter en el índice especificado.
+        Cadena vacía ("") si el índice está fuera de rango.-->
+    <!---->
+<style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+<!--primer caracter-->
+    <h1>JavaScript Strings</h1>
+    <h2>El método charAt()</h2>
+    
+    <p>charAt() devuelve el carácter en un índice especificado (posición) en una cadena.</p>
+    <p>Obtener el primer carácter de una cadena:</p>
+    
+    <p id="demo" class="resultado"></p>
+    
+    <script>
+        let text = "HELLO WORLD";
+        let letter = text.charAt(0);
+        document.getElementById("demo").innerHTML = letter;
+    </script>
+<!--segundo caracter-->
+    <h1>JavaScript Strings</h1>
+    <h2>El método charAt()</h2>
+    
+    <p>charAt() devuelve el carácter en un índice especificado (posición) en una cadena.</p>
+    <p>Obtenga el segundo carácter en una cadena:</p>
+    
+    <p id="demo1" class="resultado"></p>
+    <script>
+        let text1 = "HELLO WORLD";
+        let letter1 = text.charAt(1);       
+        document.getElementById("demo1").innerHTML = letter1;
+    </script>
+<!--último caracter-->
+    <h1>JavaScript Strings</h1>
+    <h2>El método charAt()</h2>
+
+    <p>charAt() devuelve el carácter en un índice especificado (posición) en una cadena.</p>
+    <p>Obtener el último carácter de una cadena:</p>
+    <p id="demo2" class="resultado"></p>
+
+    <script>
+        let tex2t = "HELLO WORLD";
+        let letter2 = text.charAt(text.length-1);
+        document.getElementById("demo2").innerHTML = letter2;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+El objeto window se considera el objeto más importante de JavaScript.
+Permite gestionar las ventanas del navegador. Es un objeto implícito, con lo
+cual no es necesario nombrarlo para acceder a los objetos que se
+encuentran debajo de su nivel de jerarquía.

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objetos Math </title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_math.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math-->
+    <!---->
+
+    <style>
+        .respuestas{
+            color:blue;
+        }
+    </style>
+  
+</head>
+<body>
+    <p>devuleve el valor absoluto de un número</p>
+    <p id="demo" class="respuestas"></p>
+<!--Math.abs() devuleve el valor absoluto de un número-->
+<!--como parámetro le entra un número-->
+    <p>devuleve el valor absoluto de un número</p>
+    <script>
+        let a = Math.abs(7.25); //devuelve 7.25
+        let b = Math.abs(-7.25);    //devuelve 7.25
+        let c = Math.abs(null); //devuelve 0
+        let d = Math.abs("Hello");  //devuelve NaN
+        let e = Math.abs(2-3);  //devuelve 1
+        document.getElementById("demo").innerHTML = 
+        a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e;
+    </script>
+<!--Math.acos() devuleve el acocoseno de un número-->
+<!--como parámetro le entra un número-->
+    <p>devuleve el acocoseno de un número</p>
+    <p id="demo2" class="respuestas"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = Math.acos(-1); //devuelve el arcocoseno de -1=3.141592653589793
+    </script>
+<!--Math.asin() devuelve el arcoseno-->
+    <p>devuelve el arcoseno</p>
+    <p id="demo3" class="respuestas"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = Math.asin(1); //devuelve el arcoseno de 1=1.5707963267948966
+    </script>
+<!--Math.ceil() devuelve el número entero superior-->
+    <p>devuelve el número entero superior</p>
+    <p id="demo4" class="respuestas"></p>
+    <script>
+        var a = Math.ceil(0.60);    //devuelve 1
+        var b = Math.ceil(0.40);    //devuelve 1
+        var c = Math.ceil(5);       //devuelve 5
+        var d = Math.ceil(5.1);     //devuelve 6
+        var e = Math.ceil(-5.1);    //devuelve -5
+        var f = Math.ceil(-5.9);    //devuelve -5
+        document.getElementById("demo4").innerHTML =
+            a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e + "<br>" + f;
+    </script>
+<!--Math.cos() devuelve el coseno--> 
+    <p>devuelve el coseno</p>
+    <p id="demo5" class="respuestas"></p>
+    <script>
+        let x = Math.cos(3.14);
+        document.getElementById("demo5").innerHTML = x.toFixed(2); //Math.cos() devuelve el coseno de un ángel dado en radianes. -1.00
+    </script>
+<!--Math.exp() devuelve el exponencial-->
+    <p>devuelve el exponencial</p>
+    <p id="demo5" class="respuestas"></p>
+    <script>
+        let a = Math.exp(1);    //devuelve 2.718281828459045
+        let b = Math.exp(-1);   //devuelve 0.36787944117144233
+        let c = Math.exp(5);    //devuelve 148.4131591025766
+        let d = Math.exp(10);   //devuelve 22026.465794806718
+        document.getElementById("demo5").innerHTML =
+            a + "<br>" + b + "<br>" + c + "<br>" + d; 
+    </script>
+<!--Math.floor() devuelve el número entero inferior-->
+    <p>devuelve el número entero inferior</p>
+    <p id="demo6" class="respuestas"></p>
+    <script>
+        let a = Math.floor(0.60);   //devuelve 0
+        let b = Math.floor(0.40);   //devuelve 0
+        let c = Math.floor(5);      //devuelve 5
+        let d = Math.floor(5.1);    //devuelve 5
+        let e = Math.floor(-5.1);   //devuelve -6
+        let f = Math.floor(-5.9);   //devuelve -6
+        document.getElementById("demo6").innerHTML =
+            a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e + "<br>" + f;
+    </script>
+<!--Math.log() devuelve el algoritmo natural-->
+    <p>Devuelve el algoritmo</p>
+    <p id="demo7" class="respuestas"></p>
+    <script>
+        let a = Math.log2(2.7183);  //devuelve 1.4427046851812222
+        let b = Math.log2(2);       //devuelve 1
+        let c = Math.log2(1);       //devuelve 0
+        let d = Math.log2(0);       //devuelve -infinity
+        let e = Math.log2(-1);      //devuelve NaN
+        document.getElementById("demo7").innerHTML =
+            a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e;
+    </script>
+
+<!--Math.max() devuelve el número máximo entre los números pasados por argumento-->
+    <p>Devuelve el número máximo</p>
+    <p id="demo8" class="respuestas"></p>
+    <script>
+        let a = Math.max(5, 10);    //devuelve 10
+        let b = Math.max(0, 150, 30, 20, 38);   //devuelve 150
+        let c = Math.max(-5, 10);     //devuelve 10
+        let d = Math.max(-5, -10);      //devueve -5
+        let e = Math.max(1.5, 2.5);     //devuelve 2.5
+        document.getElementById("demo8").innerHTML =
+            a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e;
+    </script>
+<!--Math.min() devuelve el número mínimo entre los números pasados por argumento--->
+    <p>Devuelve el número mínimo</p>
+    <p id="demo9" class="respuestas"></p>
+    <script>
+        let a = Math.min(5, 10);    //devuelve 5
+        let b = Math.min(0, 150, 30, 20, 38);   //devuelve 0
+        let c = Math.min(-5, 10);   //devuelve -5
+        let d = Math.min(-5, -10);  //devuelve -10
+        let e = Math.min(1.5, 2.5); //devuelve 1.5
+        document.getElementById("demo9").innerHTML =
+            a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e;
+    </script>
+<!--Math.pow() devuelve el resultado de un número elevado a la potencia especificada-->
+    <p>Devuelve la potencia</p>
+    <p id="demo10" class="respuestas"></p>
+    <script>
+        document.getElementById("demo10").innerHTML = Math.pow(4, 3); //devuelve el valor de x a la potencia de y(x,y)
+    </script>
+<!--Math.random() devuelve un número aleatorio entre 0 y 1-->
+<!--https://www.w3schools.com/jsref/jsref_random.asp-->
+    <p>Devuelve un número aleatorio entre el 0 y el 1</p>
+    <p id="ramdom" class="respuestas"></p>
+    <script>
+        document.getElementById("ramdom").innerHTML = Math.random();
+    </script>
+    <p>Devuelve un número aleatorio entre el 0 y el 10</p>
+    <p id="ramdom1" class="respuestas"></p>
+    <script>
+    let x = Math.random() * 10;
+        document.getElementById("ramdom1").innerHTML = x;
+    </script>
+    <p>Devuelve un número aleatorio entre el 0 y el 100</p>
+    <p id="ramdom2" class="respuestas"></p>
+    <script>
+    let x = Math.random() * 100;
+        document.getElementById("ramdom2").innerHTML = x;
+    </script>
+     <p>Devuelve un número aleatorio entre el 1 y el 10</p>
+     <p id="ramdom3" class="respuestas"></p>
+    <script>
+l   let x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("ramdom3").innerHTML = x;
+    </script>
+    <p>Devuelve un número aleatorio entre el 1 y el 100</p>
+    <p id="ramdom4" class="respuestas"></p>
+    <script>
+    let x = Math.floor((Math.random() * 100) + 1);
+        document.getElementById("ramdom4").innerHTML = x;
+    </script>
+
+<!--Math.sin() devuelve el seno-->
+    <p>Devuelve el seno</p>
+    <p id="demo11" class="respuestas"></p>
+    <script>
+        let x = Math.sin(3.14);
+        document.getElementById("demo11").innerHTML = x.toFixed(2);
+    </script>
+<!--Math.sqrt() devuelve la raiz cuadrada-->
+    <p>Devuelve la raiz cuadrada</p>
+    <p id="demo12" class="respuestas"></p>
+    <script>
+        let a = Math.sqrt(0);   //devuelve 0
+        let b = Math.sqrt(1);   //devuelve 1
+        let c = Math.sqrt(9);   //devuelve 3
+        let d = Math.sqrt(64);  //devuelve 8
+        let e = Math.sqrt(-9);  //devuelve NaN
+        document.getElementById("demo12").innerHTML =
+            a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e;
+    </script>
+
+
+       
+       
+</body>
+</html>

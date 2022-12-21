@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objeto fixed() </title>
+    <!--https://www.w3schools.com/jsref/obj_navigator.asp-->
+    <!---->
+    <!--appCodeName()Devuelve el código del nombre del navegador-->
+    <style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+ <!--objeto navegador-->  
+    <h1>El objeto del navegador de ventanas</h1>
+    <h2>La propiedad del idioma</h2>
+    <p id="demo" class="resultado"></p>
+    <script>
+        let language = window.navigator.language;
+        document.getElementById("demo").innerHTML = "Idioma del navegador: " + language;
+    </script>
+<!---->
+    <h1>El objeto del navegador de ventanas</h1>
+    <h2>La propiedad appCodeName</h2>
+    <p id="demo1" class="resultado"></p>
+    <script>
+        let navegador = navigator.appCodeName;
+        document.getElementById("demo1").innerHTML = "El nombre del código del navegador es : " + navegador;
+    </script>
+<!---->
+<h1>El objeto del navegador de ventanas</h1>
+<h2>Todas las propiedades</h2>
+
+<div id="demo2" class="resultado"></div>
+
+<script>
+let text = "<p>Nombre en clave del navegador : " + navigator.appCodeName + "</p>" +
+"<p>Nombre del navegador: " + navigator.appName + "</p>" +
+"<p>Versión del navegador: " + navigator.appVersion + "</p>" +
+"<p>Cookies habilitadas: " + navigator.cookieEnabled + "</p>" +
+"<p>Idioma del navegador: " + navigator.language + "</p>" +
+"<p>Navegador en línea: " + navigator.onLine + "</p>" +
+"<p>Plataforma: " + navigator.platform + "</p>" +
+"<p>Encabezado de agente de usuario: " + navigator.userAgent + "</p>";
+
+document.getElementById("demo2").innerHTML = text;
+</script>
+
+</body>
+</html>

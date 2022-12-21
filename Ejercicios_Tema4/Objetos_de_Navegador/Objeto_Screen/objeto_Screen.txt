@@ -1,0 +1,14 @@
+El objeto screen corresponde a la pantalla utilizada por el usuario. Este
+objeto cuenta con seis propiedades.
+
+Todas sus propiedades son solamente de lectura, lo que significa que
+podemos consultar los valores de las propiedades del objeto, pero no las
+modificar.
+
+El uso del objeto screen y sus propiedades, es muy común en los
+diseñadores de páginas web que necesitan saber la resolución total de la
+pantalla del usuario para poder adaptar sus diseños antes de cargarlos. Otro
+uso común de este objeto, es consultar todas sus propiedades con el fin de
+adaptar la posición y el tamaño de las ventanas emergentes que abra la
+aplicación web.
+

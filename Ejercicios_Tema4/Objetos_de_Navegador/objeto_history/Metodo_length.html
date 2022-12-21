@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> propiedad length </title>
+    <!--https://www.w3schools.com/jsref/obj_history.asp-->
+    <!--https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador-->
+    <!--length lista del historial--> 
+  <style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+
+<h1>El objeto de historial de ventana</h1>
+<h2>La propiedad history.length</h2>
+
+<p>Número de URL en la lista de historial:</p>
+<p id="demo"></p>
+<p>Como se trata de un nuevo marco de ventana, history.length siempre devolverá 1.</p>
+
+<script>
+  let length = window.history.length;
+  document.getElementById("demo").innerHTML = length;
+</script>
+
+
+
+
+</body>
+</html>

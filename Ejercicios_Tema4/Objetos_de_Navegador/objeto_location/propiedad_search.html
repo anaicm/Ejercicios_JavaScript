@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> propiedad search </title>
+    <!--https://www.w3schools.com/jsref/obj_location.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/API/Window/location-->
+    <!--search corresponde a la cadena de búsqueda que se encuentra después 
+        de un signo de interrogación de la URL--> 
+  <style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>El objeto de ubicación de la ventana</h1>
+    <h2>La propiedad de búsqueda</h2>
+
+    <p><a id="w3s" href="https://www.w3schools.com/?answer=yes">
+    https://www.w3schools.com/?answer=yes</a></p>
+    <p id="demo" class="resultado"></p>
+    
+    <script>
+        let anchor = document.getElementById("w3s");
+        let query = anchor.search;
+        document.getElementById("demo").innerHTML = "La parte de consulta de la URL es: " + query;
+    </script>
+    
+
+
+
+
+</body>
+</html>

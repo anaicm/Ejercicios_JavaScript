@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objeto fromCharCode() </title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_string.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String-->
+    <!---->
+    <!--fromCharCode() convierte valores unicode en caracteres-->
+    <!--El String.fromCharCode()método convierte valores Unicode en caracteres.
+        El String.fromCharCode()es un método estático del objeto String.
+        La sintaxis es siempre String.fromCharCode(). No puedes usar myString.fromCharCode().-->
+    <!--parámetros n1, n2, nX,	Required. One or more Unicode values to be converted.-->
+    <!--devuelve Una cadena que representa los caracteres Unicode.-->
+    <!---->
+<style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+    <h1>JavaScript Strings</h1>
+    <h2>El método String.fromCharCode()</h2>
+    
+    <p>String.fromCharCode() convierte los valores Unicode en cadenas:</p>
+    <p>Convierta 72, 69, 76, 76, 79 en una cadena</p>   
+    <p id="demo" class="resultado"></p>
+    
+    <script>
+    let text = String.fromCharCode(72, 69, 76, 76, 79);
+    document.getElementById("demo").innerHTML = text; //devuelve "HELLO"
+    </script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objeto fontSize() </title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_string.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/fontsize-->
+    <!--obsoleto-->
+    <!--fontSize() modifica el tamaño de la fuente de una cadena-->
+    <!--Cuando especificas el tamaño como entero, estableces el tamaño de la fuente.
+         Cuando especificas el tamaño como cadena tal como "-2", 
+         se ajusta el tamaño de la fuente al de la etiqueta <basefont>.-->
+<style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+    <h1>Cadenas JavaScript</h1>
+    <h2>El método fontSize()</h2>
+    
+    <p>fontSize()especifica la fuente de una cadena.</p>
+    <p>Aumenta el tamaño de la fuente:</p>
+    <p id="demo" class="resultado"></p>
+    <p id="demo2" class="resultado"></p>
+
+    <script>
+        let text = "HELLO WORLD";
+        let code = text.fontsize(24); //especifica el tamañao de la fuente
+        document.getElementById("demo").innerHTML = code;
+        let code2 = text.fontsize("-16"); //ajusta el tamaño de la cadena
+        document.getElementById("demo2").innerHTML = code2;
+    </script>
+
+
+</body>
+</html>

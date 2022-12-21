@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Objeto fontColor() </title>
+    <!--https://www.w3schools.com/jsref/jsref_obj_string.asp-->
+    <!--https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/fontcolor-->
+    <!--obsoleto-->
+    <!--fontColor() modifica el color de la fuente de una cadena-->
+    <!--El método fontcolor() crea <font> elemento HTML que cambia el color de la cadena.-->
+    <!--sintaxis; str.fontcolor(color)-->
+<style>
+    .resultado{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+    <h1>Cadenas JavaScript</h1>
+    <h2>El método fontColor()</h2>
+    
+    <p>fontColor()cambia el color de una cadena.</p>
+    <p>Aumenta el tamaño de la fuente:</p>
+    <p id="demo" ></p>
+    <p id="demo2" class="resultado"></p>
+
+    <script>
+        let text = "HELLO WORLD";
+        let code = text.fontcolor("green");
+        document.getElementById("demo").innerHTML = code;
+        let code2 = text.fontsize("-16"); //ajusta el tamaño de la cadena
+        document.getElementById("demo2").innerHTML = code2;
+    </script>
+
+
+
+
+
+</body>
+</html>

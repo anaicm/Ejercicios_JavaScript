@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 2</title>
+    <!--Crea una web con html y JavaScript que te pida la nota, y muestre la calificación según la nota:
+·         0-3: Muy deficiente
+·         3-5: Insuficiente
+·         5-6: Suficiente
+·         6-7: Bien
+·         7-9: Notable
+·         9-10: Sobresaliente
+-->
+<style>
+    .respuesta{
+        color: green;
+        font-size: 24px;
+    }
+    .respuesta2{
+        color: red;
+        font-size: 24px;
+    }
+    #contenedor{
+        background-color: aquamarine;
+        margin-right: 1100px;
+
+    }
+</style>
+  
+</head>
+<body>
+<div id="contenedor">
+<h1>La nota es:</h1>
+</div>
+<script>
+    var nota=prompt("¿Cuál es la nota?");
+    if(nota>=0 && nota<3){
+        document.write("<p class='respuesta2'>Muy deficiente</p>");
+    }else if(nota>=3 && nota<5){
+        document.write("<p class='respuesta2'>Insuficiente</p>");
+    }else if(nota>=5 && nota<6){
+        document.write("<p class='respuesta'>Suficiente</p>");
+    }else if(nota>=6 && nota<7){
+        document.write("<p class='respuesta'>Bien</p>");
+    }else if(nota>=7 && nota<9){
+        document.write("<p class='respuesta'>Notable</p>");
+    }else if(nota>=9 && nota<=10){
+        document.write("<p class='respuesta'>Sobresaliente</p>");
+    }
+
+</script>
+
+</body>
+</html>
