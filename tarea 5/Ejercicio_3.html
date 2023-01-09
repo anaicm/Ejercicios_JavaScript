@@ -6,37 +6,29 @@
     <!--Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número 
         deberá indicarse con un «alert» y seguir pidiendo. 
         Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.-->
-<style>
-   .texto{
-        color: green;
-        font-size: 24px;
-    }
-    #contenedor{
-        background-color: aquamarine;
-        margin-right: 1000px;
-
-    }
-</style>
+    <link href="hoja_estilos.css" type="text/css" rel="stylesheet">
 <script>
+    //variable para guardar la suma de los números que introduzca el usuario
     var suma = 0;
-    
+    //la funcion continuar sirve para cuando se usa el botón continuar
     function continuar(){
-        sumaNumero();
+        sumaNumero();//utiliza la función para ir guardando el valor que va entrando por el label
         document.getElementById("num").value = "";//con value="", cuando continua se limpia el label para introducir otro número
     }
-
+    //la funcion cancelar sirve para cuando se usa el botón cancelar 
     function cancelar(){
-        sumaNumero();
-        document.getElementById("num").value;
-        document.write("El resultado es: " + suma);
+        sumaNumero();//llama a la función suma
+        document.getElementById("num").value;//guarda el valor que entra
+        document.write("El resultado es: " + suma);//muestra por pantalla la suma de todos los valores 
     }
 
     function sumaNumero(){
         var numero=document.getElementById("num").value;//coge el valor que entra por label
-        if (numero != "" && !isNaN(numero)){
-            suma=suma + parseInt(numero);
-        }else{
-            alert("No estas introduciendo un número")
+        if (numero != "" && !isNaN(numero)){//si el número que entra es distinto a un string y es un número
+            suma=suma + parseInt(numero);//en la variable suma guarda la suma de los números que entran, 
+                                         //como son texto se parsea pasandolos a int.
+        }else{//pero si es una cadena y el no es un número 
+            alert("No estas introduciendo un número")//envia un alert para notificarlo.
         }
     }
 </script>
@@ -45,11 +37,14 @@
 <div id="contenedor">
 <h1>Suma</h1>
 </div>
+<!--Párrafo a modo de guía que usa la clase "texto" definida en la hoja de estilo externa 
+    realizada en la cabecera-->
 <p class="texto">Continua para introducir más números y cuando <br>
     finalices pulsa cancelar, mostrará el resultado<br>
     de la suma de todos los números introducidos.</p>
 <table>
     <tr>
+    <!--Label es para que el usuario introduzca los números-->
         <td><lable>Introduce número: <input type="text" name="num" id="num"/> </lable></td>
         
     </tr>
@@ -58,6 +53,8 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
+    <!--Cuando se hace click en el boton cancelar, llama a la función cancelar
+        y si se hace click en el botón continuar llama a la función continuar-->
         <td><input type="button" name="cancelar" id="boton" value="cancelar" onclick="cancelar();"/></td>
         <td><input type="submit" name="sumar" id="boton2" value="continuar" onclick="continuar();"/></td>
     </tr>

@@ -5,29 +5,25 @@
     <title>Ejercicio 4</title>
     <!--Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. 
         Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión.-->
-<style>
-   .texto{
-        color: green;
-        font-size: 24px;
-    }
-    #contenedor{
-        background-color: aquamarine;
-        margin-right: 1000px;
-
-    }
-</style>
+<link href="hoja_estilos.css" type="text/css" rel="stylesheet">
 <script>
+    //creación de un array para guardar las palabras que introduce el usuario
      var cadena=new Array();
+    //función para cuando se pulse el botón continuar
     function continuar(){
-        concatenar();
-        document.getElementById("palabra").value="";
+        concatenar();//llama a la función concatenar que guarda el texto que entra y lo muestra por pantalla
+        document.getElementById("palabra").value="";//cada vez que se pulsa el botón continuar deja en blanco
+                                                    // el contenido del label para introducir más palabras
 
     }
+    //función cancelar, esta actua cuando se pulsa el botón cancelar
     function cancelar(){
-        concatenar();
-        document.getElementById("palabra").value;
+        concatenar(); //lo mismo que la función continuar llama a la función concatenar
+        document.getElementById("palabra").value;//guarda el elemento introducido por el usuario
     
-        document.write("La cadena concatenada es: <br>"+cadena.join("-"));
+        document.write("La cadena concatenada es: <br>"+cadena.join("-"));// muestra la cadena de palabras introducidas por pantalla
+                                                                          // y con la función join() separa cada una con un guión.
+        
         /*for(var i=0;i<cadena.length;i++){
             if(i<cadena.length-1){
                 document.write(cadena[i] + "-");
@@ -37,12 +33,13 @@
        
         }*/
     }
+    //funcion para concatenar las palabras que entran por pantalla
     function concatenar(){
-        var palabra=document.getElementById("palabra").value;
-         if(isNaN(palabra)){
-            cadena.push(palabra);
-        }else{
-            alert("No es una palabra")
+        var palabra=document.getElementById("palabra").value;// guarda el valor que entra por pantalla
+         if(isNaN(palabra)){//si no es un número, es decir si es un String
+            cadena.push(palabra);// añade la palabra en el array cadena con la función push() que la añade en la última posición
+        }else{//pero si no es un Strin 
+            alert("No es una palabra")//manda un alert informando
         }
     }
  
@@ -53,10 +50,13 @@
 <div id="contenedor">
 <h1>palabras</h1>
 </div>
+<!--Párrafo a modo de guía que usa la clase "texto" definida en la hoja de estilo externa
+    realizada en la cabecera-->
 <p class="texto">Continua para introducir más palabras al <br>pulsa cancelar, mostrará todas las palabras<br>
     concatenadas con un guión.</p>
 <table>
     <tr>
+        <!--Label es para que el usuario introduzca palabras-->
         <td><lable>Introduce palabras: <input type="text" name="palabra" id="palabra" value=""/> </lable></td>
         
     </tr>
@@ -65,6 +65,9 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
+         <!--Cuando se hace click en el boton cancelar, llama a la función cancelar y realiza el código que 
+            contiene la función y si se hace click en el botón continuar llama a la función continuar
+             y realiza el código contenido-->
         <td><input type="button" name="cancelar" id="boton" value="cancelar" onclick="cancelar();"/></td>
         <td><input type="submit" name="continuar" id="boton2" value="continuar" onclick="continuar();"/></td>
     </tr>

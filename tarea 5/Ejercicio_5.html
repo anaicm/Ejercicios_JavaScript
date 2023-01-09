@@ -11,70 +11,26 @@
                  (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
             ·  Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
             ·  Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».-->
-<style>
-   .texto{
-        color: green;
-        font-size: 24px;
-    }
-    #contenedor{
-        background-color: aquamarine;
-        margin-right: 1000px;
+    <link href="hoja_estilos.css" type="text/css" rel="stylesheet">
 
-    }
-</style>
-<script>
-     var cadena=new Array();
-    function continuar(){
-        concatenar();
-        document.getElementById("palabra").value="";
-
-    }
-    function cancelar(){
-        concatenar();
-        document.getElementById("palabra").value;
-    
-        document.write(cadena.join("-"));
-        /*for(var i=0;i<cadena.length;i++){
-            if(i<cadena.length-1){
-                document.write(cadena[i] + "-");
-            }else{
-                document.write(cadena[i]);
-            }
-       
-        }*/
-    }
-    function concatenar(){
-        var palabra=document.getElementById("palabra").value;
-         if(isNaN(palabra)){
-            cadena.push(palabra);
-        }else{
-            alert("No es una palabra")
-        }
-    }
- 
- 
-</script>
 </head>
 <body>
-<div id="contenedor">
-<h1>palabras</h1>
-</div>
-<p class="texto">Continua para introducir más palabras al <br>pulsa cancelar, mostrará todas las palabras<br>
-    concatenadas con un guión.</p>
-<table>
-    <tr>
-        <td><lable>Introduce palabras: <input type="text" name="palabra" id="palabra" value=""/> </lable></td>
+    <script>
+        //array para guardar cada letra en una posicióm
+        var letra=new Array("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E");
+        var dni=prompt("número de DNI: ");//pide el número por pantalla guardandolo en la variable dni
+        var resto=parseInt(dni)%23; //la variable resto, guarda el valor del resto del número que entra por pantalla (se parsea 
+                                    //es un String) dividido por 23, este valor es la posición del array
+        if(dni!="" && !isNaN(dni)&& dni>=0 && dni<=99999999){// si el número que entra no es una cadena y mayor que cero y menor que
+                                                             //99999999 
+            document.write("La letra del número: "+dni+"es: " +letra[resto]);//escribe por pantalla el valor de la posición del resto
+            
+        }else{//pero si no cumple con las condiciones impuestas en el if
+            alert("El número introducido no es válido");//muestra un mensaje alertando de que no es válido
+        }
         
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td><input type="button" name="cancelar" id="boton" value="cancelar" onclick="cancelar();"/></td>
-        <td><input type="submit" name="continuar" id="boton2" value="continuar" onclick="continuar();"/></td>
-    </tr>
-</table>
+         
+        </script>
 
 </body>
 </html>
