@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 2</title>
+    <!--Crea una web con html y JavaScript que te pida la nota, y muestre la calificación según la nota:
+·         0-3: Muy deficiente
+·         3-5: Insuficiente
+·         5-6: Suficiente
+·         6-7: Bien
+·         7-9: Notable
+·         9-10: Sobresaliente
+-->
+<link href="hoja_estilos.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="contenedor">
+<h1>La nota es:</h1>
+</div>
+<script>
+    //con la función prompt() pide por pantalla la nota y está se guardará en la variable nota
+    var nota=prompt("¿Cuál es la nota?");
+    if(nota>=0 && nota<3){//Si la nota es mayor o igual a 0 y menor que tres
+        document.write("<p class='respuesta2'>Muy deficiente</p>");//muestra por pantalla "Muy insuficiente"
+    }else if(nota>=3 && nota<5){//Si la nota es mayor o igual a 3 y menor que 5
+        document.write("<p class='respuesta2'>Insuficiente</p>");//muestra por pantalla "Insuficiente"
+    }else if(nota>=5 && nota<6){//Si la nota es mayor o igual a 5 y menor que 6
+        document.write("<p class='respuesta'>Suficiente</p>");//muestra por pantalla "Suficiente"
+    }else if(nota>=6 && nota<7){//Si la nota es mayor o igual a 6 y menor que 7
+        document.write("<p class='respuesta'>Bien</p>");//muestra por pantalla "Bien"
+    }else if(nota>=7 && nota<9){//Si la nota es mayor o igual a 7 y menor que 9
+        document.write("<p class='respuesta'>Notable</p>");//muestra por pantalla "Notable"
+    }else if(nota>=9 && nota<=10){//Si la nota es mayor o igual a 9 y menor o igual a 10
+        document.write("<p class='respuesta'>Sobresaliente</p>");//muestra por pantalla "Sobresaliente"
+    }
+</script>
+</body>
+</html>

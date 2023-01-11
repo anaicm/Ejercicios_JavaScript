@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 5</title>
+    <!-- Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de indentidad).
+         El algoritmo para calcular la letra del dni es el siguiente :
+            ·  El número debe ser entre 0 y 99999999
+            ·  Debemos calcular el resto de la división entera entre el número y el número 23.
+            ·  Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes: 
+                 (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
+            ·  Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
+            ·  Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».-->
+    <link href="hoja_estilos.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    <script>
+        //array para guardar cada letra en una posicióm
+        var letra=new Array("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E");
+        var dni=prompt("número de DNI: ");//pide el número por pantalla guardandolo en la variable dni
+        var resto=parseInt(dni)%23; //la variable resto, guarda el valor del resto del número que entra por pantalla (se parsea 
+                                    //es un String) dividido por 23, este valor es la posición del array
+        if(dni!="" && !isNaN(dni)&& dni>=0 && dni<=99999999){// si el número que entra no es una cadena y mayor que cero y menor que
+                                                             //99999999 
+            document.write("La letra del número: "+dni+"es: " +letra[resto]);//escribe por pantalla el valor de la posición del resto
+            
+        }else{//pero si no cumple con las condiciones impuestas en el if
+            alert("El número introducido no es válido");//muestra un mensaje alertando de que no es válido
+        }
+        
+         
+        </script>
+
+</body>
+</html>

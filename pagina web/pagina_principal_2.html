@@ -4,63 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Página web paseando por Andalucía</title>
     <!--La página recorrera las provincias para conocer Andalucía-->
-  
-<style>
-#menuvertical {
-    float: left;
-margin:0;
-padding:0;
-list-style-type:none;
-}
-#cabecera{
-    
-    text-align: center;
-    background-color: green;
-    color: aliceblue;
-}
-#imagen{
-    text-align: center;
-   
-}
-.imagen{
-    width: 500px;
-    height: 300px;
-}
-.boton{
-    width: 150px;
-}
-.marquesina{
-    width: auto;
-    direction: right;
-    height: 400px;
-    
-}
+    <link href="estilos_CSS/hoja_estilos.css" type="text/css" rel="stylesheet">  
+<!--  object-fit: scale-down; se ajusta al tamaño de la caja del div-->
 
-.tabla_marquesina{
-    
-    width: 350px;
-    height: 200px;
-}
-#myAudio{
-    visibility: hidden;
-}
-
-</style>
 
 <script>
 </script>
 </head>
 
 <body>
-   
-<div id="cabecera">
-    <h1>Andalucía paraiso con encanto</h1>
-</div>
+<!--Título para la presentación de la página-->
+<p id="cabecera">Andalucía paraíso con encanto</p> 
+<!--Menú vertical realizado dentro de una tabla con cinco filas y un campo
+    en cada campo contiene un input de tipo button, al pulsar el boton, lleva
+    al enlace que proporciona información-->  
 <div id="menuvertical">
     <table>
         <tr><td>
             <a href="https://www.booking.com/index.es.html?aid=376371&label=es-JCB2UqznXtCO_RDP_nj5CAS410545262609:pl:ta:p1:p22.563.000:ac:ap:neg:fi:tikwd-65526620:lp9047063
-            :li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9Ye8F2ouj63ytkBtrYs5TAfs;ws=&gclid=EAIaIQobChMIke7K
+           :li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9Ye8F2ouj63ytkBtrYs5TAfs;ws=&gclid=EAIaIQobChMIke7K
             _sqz_AIVke53Ch0UugzJEAAYASAAEgKOB_D_BwE">
             <input type="button" class="boton" name="alojamiento" value="Alojamiento"/></a>
         </td></tr>
@@ -76,63 +38,66 @@ list-style-type:none;
             <a href="https://canalandaluciaturismo.es/">
             <input type="button" class="boton" name="canal" value="Canal Local"/></a>
         </td></tr>
-    </table>
-
+        <tr><td>
+            <a href="https://yhoyquecomemos.com/platos-tipicos-de-andalucia-por-provincias/">
+            <input type="button" class="boton" name="gastronomia" value="Gastronomía"/></a>
+        </td></tr>
+    </table>   
 </div>
-<div id="imagen">
-<img src="imagenes/Mapa_original_Andalucia.png" usemap="#image-map" class="imagen">
-    
-    <map name="image-map">
-        <area target="" alt="Huelva" title="Huelva" href="Huelva.html" coords="216,360,151,304,132,297,113,286,91,293,72,273,72,252,67,229,75,215,92,185,102,172,118,156,134,146,144,133,155,122,165,125,173,137,188,139,202,149,215,150,229,153,243,162,257,169,257,189,236,199,221,206,205,218,208,225,216,229,224,238,227,247,232,254,228,264,225,295,220,308,221,338,182,322,555,639,274,171,284,166,291,159,298,151,304,139,315,135,318,145,325,148,332,143,340,141,345,143,348,150,352,165,355,175,364,188,371,199,370,211,357,216,359,223,362,231,370,236,377,235,384,233,391,228,402,224,413,219,422,224,425,235,428,243,432,251,436,260,442,269,444,277,447,283,455,285,463,285,463,294,455,304,445,303,432,307,427,312,425,319,415,326,405,331,399,336,389,340,383,330,373,331,367,335,359,341,350,346,339,346,329,341,266,178,267,186,262,193,252,201,242,203,231,205,222,212,220,218,228,226,231,236,235,242,239,252,242,263,235,267,234,274,232,283,235,293,232,299,232,315,229,322,230,331,232,341,236,346,250,351,240,350,255,353,262,354,273,356,279,358,291,358,299,351,308,347,315,343,322,339,728,802" shape="poly">
-        <area target="" alt="Sevilla" title="Sevilla" href="Sevilla.html" coords="" shape="poly">
-    </map>
-</div>
-<br><br><br><br>
-<div id="marco">
-    <marquee class="marquesina">
-        <table >
-            <tr>
-                <th>Huelva</th>
-                <th>Sevilla</th>
-                <th>Cádiz</th>
-                <th>Málaga</th>
-                <th>Córdoba</th>
-                <th>Jaén</th>
-                <th>Granda</th>
-                <th>Almería</th>
-            </tr>
-            <tr>
-                <td> <img src="imagenes/huelva/rocio.jpg" class="tabla_marquesina"></td>
-               <td> <img src="imagenes/sevilla/plaza_españa.jpg" class="tabla_marquesina"></td>
-               <td> <img src="imagenes/cadiz/ciudad_cadiz.jpg" class="tabla_marquesina"></td>
-               <td> <img src="imagenes/malaga/muelle_uno.jpg" class="tabla_marquesina"></td>
-               <td> <img src="imagenes/cordoba/alcazar_de_los_reyes.jpg" class="tabla_marquesina"></td>
-               <td> <img src="imagenes/jaen/catedral.jpg" class="tabla_marquesina"></td>
-               <td> <img src="imagenes/granada/alhambra.jpg" class="tabla_marquesina"></td>
-               <td> <img src="imagenes/almeria/cabo_gata.jpg" class="tabla_marquesina"></td>
-            </tr>
+<!--Al iniciarse con muted el video se reproduce sin problema en modo loop.-->
+<!--transform: translateX(calc((100% - 100vw) / 2));hace mas facil añadir imagenes
+    en determinadas circustancias.
+    Para este CSS lo he sacado del siguiente enlace:
+    https://carontestudio.com/blog/como-poner-un-video-de-fondo-en-html/-->
+<!--Cuando el ratón esta encima del vídeo muestra el nombre del autor aunque este sea
+    sin copyright-->
+<video src="video/cascada.mp4" autoplay="true" muted="true" loop="true" title="Antonio López Pixabay"></video>
+<!--Para la reproducción del audio es necesario tener permisos del micrófono,
+    estos se comprueban mediante javaScript -->
+<audio id="myAudio" autoplay loop controls>
+    <source src="musica/musica_flamenca.mp3" type="audio/mpeg">
+</audio>
+    <!--Pone la marquesina en el pie de página-->
+    <footer>
+        <!--Con la marquesina se consigue el efecto de movimiento de las imagenes
+            incluidas en una tabla-->
+        <marquee class="marquesina">
+            <!--la tabla tiene dos filas una para el título y otra donde está incluida la imagen-->
+            <table >
+                <tr>
+                    <th>Huelva</th>
+                    <th>Sevilla</th>
+                    <th>Cádiz</th>
+                    <th>Málaga</th>
+                    <th>Córdoba</th>
+                    <th>Jaén</th>
+                    <th>Granda</th>
+                    <th>Almería</th>
+                </tr>
+                <tr>
+                    <!--Cuando el ratón esta encima de la imagen muestra el nombre del autor aunque estas sean
+                        sin copyright-->
+                    <td> <img src="imagenes/provincias/huelva/rocio.jpg" class="tabla_marquesina" title="Antonio López Pixabay"></td>
+                    <td> <img src="imagenes/provincias/sevilla/plaza_españa.jpg" class="tabla_marquesina" title="David Mark en pixabay"></td>
+                    <td> <img src="imagenes/provincias/cadiz/ciudad_cadiz.jpg" class="tabla_marquesina" title="Юлия Сорокина en Pixabay"></td>
+                    <td> <img src="imagenes/provincias/malaga/muelle_uno.jpg" class="tabla_marquesina" title="Alfonso Cerezo en Pixabay"></td>
+                    <td> <img src="imagenes/provincias/cordoba/alcazar_de_los_reyes.jpg" class="tabla_marquesina" title="Waldo Miguez en Pixabay"></td>
+                    <td> <img src="imagenes/provincias/jaen/catedral.jpg" class="tabla_marquesina" title="Antonio Garcia Prats en Pixabay"></td>
+                    <td> <img src="imagenes/provincias/granada/alhambra.jpg" class="tabla_marquesina" title="granagramers en Pixabay"></td>
+                    <td> <img src="imagenes/provincias/almeria/cabo_gata.jpg" class="tabla_marquesina" title="Francisco J. en Pixabay"></td>
+                </tr>
             </table>
-       
-    </div>  
-       
-
-    </marquee>
-   
-        
-    
-    
-    <audio id="myAudio" autoplay loop controls>
-        <source src="musica_flamenca.mp3" type="audio/mpeg">
-    </audio>
-
+        </marquee>            
+    </footer>
 </body>
-<script>
-     navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
-        
-        var x = document.getElementById("myAudio"); 
-        x.play();
 
-         // stop microphone stream acquired by getUserMedia
+<script>
+     navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {//comprueba los permisos del microfono
+        
+        var x = document.getElementById("myAudio"); //guarda el audio en la variable 
+        x.play();//Sí tiene permiso llama a la función play 
+
+         // para el Stream del microfono para que solo se reproduzca el audio
          stream.getTracks().forEach(function (track) { track.stop(); });
      });
 </script>
