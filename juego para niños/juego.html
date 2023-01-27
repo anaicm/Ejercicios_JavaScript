@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Jugar</title>
+    <!--Queremos realizar un pequeño juego con JavaScript para niños pequeños para reforzar colores. Para ello
+        queremos que en la pantalla aparezcan 4 cuadrados de diferentes colores y de forma aleatoria indicarle al niño
+        cual debe hacer click:
+            1) Generamos tanto el documento html como el doumento js.
+            2) Sobre el documento html generamos cuatro divs cuadrados con diferentes ids (1,2,3,4)
+            3) Sobre el documento js y de forma random, cada vez que se carge el documento, mostraremos
+                un mensaje de qué color debe apretar el niño
+            4) Detectaremos sobre qué div el niño ha realizado el click con el ratón, y mostraremos un mensaje
+                de correcto o incorrecto.-->
+    <link href="hoja_estilos.css" type="text/css" rel="stylesheet">  
+</head>
+<body>
+    <h1>Selecciona el color correcto</h1>
+    <!--con this entra la lo que hace ese boton-->
+    <!--innerText coje el valor de texto de la etiqueta (azul en el elemento1)-->
+    <div>
+        <div id="elemento1" class="contenido color" onclick="elegir_color(this.innerText)">Azul</div>
+        <div id="elemento2" class="contenido color" onclick="elegir_color(this.innerText)">Verde</div>
+        <div id="elemento3" class="contenido color" onclick="elegir_color(this.innerText)">Rojo</div>
+        <div id="elemento4" class="contenido color" onclick="elegir_color(this.innerText)">Amarillo</div>
+    </div>
+    <div position="relative">
+        <p id="colorElegir">Pulsa el color: </p>
+    </div>
+<script src="codigo_juego.js"></script>
+  
+</body>
+</html>
