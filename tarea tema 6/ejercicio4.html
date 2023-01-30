@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 4</title>
+    <!--Borrando atributos de un objeto:
+        function coche(modelo, color, kms, combustible) {  
+            this.modelo = modelo;
+            this.color = color;  
+            this.kms = kms;  
+            this.combustible = combustible;  
+        }  
+            var elmio = new coche("Mercedes E330", "negro", 120000, "diésel");  
+            var eltuyo = new coche("BMV 318", "blanco", 210000, "gasolina");
+ 
+        En el ejemplo anterior, ¿se puede borrar un atributo con la siguiente sentencia?:
+        delete elmio.matrícula;-->
+   
+</head>
+<body>
+    <p id="coches">Objeto coche sin marticula<br></p>
+    <p id="coches2">Objeto coche2 con marticula<br></p>
+    <p id="coches3">Objeto coche2 con marticula eliminada<br></p>
+    <script>
+    function coche(modelo, color, kms, combustible) {  
+            this.modelo = modelo;
+            this.color = color;  
+            this.kms = kms;  
+            this.combustible = combustible;  
+        } 
+    var elmio = new coche("Mercedes E330", "negro", 120000, "diésel");  
+    var eltuyo = new coche("BMV 318", "blanco", 210000, "gasolina");
+    document.getElementById("coches").innerText +="MODELO: "+ elmio.modelo+ ", COLOR: "+elmio.color+", Kms: " +elmio.kms+", COMBUSTIBLE: "+elmio.combustible;
+    //El operador delete de JavaScript remueve una propiedad de un objeto;
+    // precisamente en este ejemplo no podría borrar la propiedad "matricula" ya que no lo contiene el objeto.
+    delete elmio.matrícula;
+    //---------------------------------------------------------------------------------------------------------------------------------
+    //si creamos un objeto con el atributo matricula
+    function coche2(modelo, color, kms, combustible,matricula) {  
+            this.modelo = modelo;
+            this.color = color;  
+            this.kms = kms;  
+            this.combustible = combustible; 
+            this.matricula=matricula; 
+        }
+    //se crea el objeto "coche2" con todas las propiedades incluida la propiedad "matricula".
+    var elmio2 = new coche2("Mercedes E330", "negro", 120000, "diésel","MA5423");
+    //se muestra el objeto "coche2" con todas las propiedades incluida la propiedad "matricula". 
+    document.getElementById("coches2").innerText +="MODELO: "+ elmio2.modelo+ ", COLOR: "+elmio2.color+", Kms: " +elmio2.kms+", COMBUSTIBLE: "+elmio2.combustible+", MATRICULA: "+elmio2.matricula;
+    //se elimina la propiedad
+    delete elmio2.matricula;
+    //se muestra el objeto "coche2" con todas las propiedades incluida la propiedad "matricula".
+    //como se podrá ver por pantalla, la propiedad "matricula" esta sin definir, por lo que no existe.
+    document.getElementById("coches3").innerText +="MODELO: "+ elmio2.modelo+ ", COLOR: "+elmio2.color+", Kms: " +elmio2.kms+", COMBUSTIBLE: "+elmio2.combustible+", MATRICULA: "+elmio2.matricula;
+    </script>
+  
+</body>
+</html>
+
+

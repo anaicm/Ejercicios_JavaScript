@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 1</title>
+    <!--Dado un array de enteros, comprobar el mayor, el menor y por último la media de todos.
+        El botón «Cargar Ejemplo» pondrá un ejemplo de números predefinidos-->
+   
+</head>
+<body>
+  <input type="text" name="introduccion_numeros" id="texto">
+  <input type="button" name="boton" id="boton" value="Cargar Ejemplo" onclick="crear_arrya()">
+  <p id="numero">El número mayor es: </p>
+  <p id="numero2">El número menor es: </p>
+  <p id="numero3">La media es: </p>
+
+  <script>
+    //------------------------------------------crear array--------------------------------------------------
+    function crear_arrya(){
+    var num_predefinido=document.getElementById("texto").value;
+    var array_numeros=new Array();
+    // si entra una cadena de números separados por comas 1,2,5,4,3,9,7,6,8
+
+    var separar_string=num_predefinido.split(",");
+    for(var i=0; i<separar_string.length;i++){
+      array_numeros.push(parseInt( separar_string[i]));
+    }
+    operaciones(array_numeros);
+    } 
+   //-----------------------------------funcion operaciones-------------------------------------------------
+    function operaciones (elementos){
+    var maximo=elementos[0];
+    var minimo=elementos[0];
+    var suma=0;
+    var media=0;
+
+     for(var i=0;i<elementos.length;i++){
+        //-----------------------------------número mayor------------------------------------------------------
+        if(maximo<elementos[i]){
+          maximo=elementos[i]; 
+        //-----------------------------------número menor------------------------------------------------------  
+        }if(minimo>elementos[i]){
+          minimo=elementos[i];
+        }
+        suma+=elementos[i];
+     }
+     //-----------------------------------media------------------------------------------------------------- 
+     media=suma/elementos.length;
+
+     document.getElementById("numero").innerHTML+=" "+maximo;
+     document.getElementById("numero2").innerHTML+=" "+minimo;
+     document.getElementById("numero3").innerHTML+=" "+media;
+    }
+
+  
+ 
+
+    
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 3</title>
+    <!--Teniendo un array muy grande con elementos de la siguiente estructura: 
+        “28924;Estepona”
+        Crea un texto y un botón que ponga buscar que muestre el CP y el nombre 
+        de la ciudad que coincida o contenga el texto del campo creado. 
+        No importan las mayúsculas y minúsculas en la búsqueda.-->  
+</head>
+<body>
+  <form>
+    <p>Que Municipio buscas</p>
+    <input type="text" id="texto">
+    <input type="button" value="buscar" onclick="busca_pueblo()"><!--al pulsar el boton realiza la función buscar_pueblo-->
+  </form>
+  <div id="resultado"></div>
+  <!------------------------------------------------------------------------------------------------------------------------->
+  <script>
+    var encontrado = false;
+    var pueblos=["28924;Estepona", "23600;Martos","29580;Cartama","29530;Alameda","	29711;Alcaucín","29194;Alfarnate"];//creo el array
+    function busca_pueblo(){
+      var texto_pueblo=document.getElementById("texto").value;//guarda lo que entra por el input
+      for(var i=0;i<pueblos.length;i++){//recorre el array
+        var separar_array=pueblos[i].split(";");//separa el array creando otro array
+        var cp=separar_array[0];//posicion 0 código postal
+        var municipio=separar_array[1].toLowerCase();//posicion 1 municipio, convirtiendo el texto en minusculas con toLowerCase()
+        //si lo que entra por input es igual al municipio o contiene texto del nombre del municipio 
+        //con indexOf()si no esta contenido devuelve -1 por lo que tiene que ser distinto
+        if(texto_pueblo==municipio|| municipio.indexOf(texto_pueblo)!=-1){
+          //devuevle el municipio y el cp en el <div> con getElementById mediante el identificador "resultado"
+          document.getElementById("resultado").innerHTML+= "<p>"+municipio+" y su código postal es: " + cp +"</p>";
+          encontrado = true;
+        }
+    }
+   
+    if (!encontrado){
+        alert("ese Municipio no se encuentra en la base ");//ese municipio no esta 
+      
+    }
+     
+    }
+  
+    	
+
+
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 5</title>
+    <!--Crea una página web con un script que contenga un objeto de la clase persona, 
+        la cual tendrá los siguientes atributos:
+            Nombre: Dimas.
+            Edad: 28.
+            Altura: 185.
+        Una vez creado el objeto, se deberá mostrar por consola: 
+        “El usuario Dimas tiene 28 años y mide 185 centímetros”.
+        Todo ello utilizando los atributos del objeto-->
+    
+</head>
+<body>
+    <p id="personas"></p>
+
+  <script>
+    //funcion para crear objetos personas
+    function persona(nombre,edad,altura){
+        this.nombre=nombre;
+        this.edad=edad;
+        this.altura=altura;
+
+    }
+    //creación de un objeto perona.
+    var persona1=new persona("Dimas","28","185");
+    //en la etiqueta <p> mediante el id "personas" con getElementeById
+    //con el objeto "persona" se llama a todas las propiedades de este.
+    document.getElementById("personas").innerText +="El usuario " + persona1.nombre + " tiene " + persona1.edad +" años y mide " + persona1.altura +" centímetros";
+</script>
+<!--
+  <script>
+    //creación del objeto
+    var persona={
+        nombre:"Dimas",
+        edad:"28",
+        altura:"185",
+    };
+    //en la etiqueta <p> mediante el id "personas" con getElementeById
+    //con el objeto "persona" se llama a todas las propiedades de este.
+    document.getElementById("personas").innerText +="El usuario " + persona.nombre + " tiene " + persona.edad +" años y mide " + persona.altura +" centímetros";
+  </script>
+  -->
+</body>
+</html>

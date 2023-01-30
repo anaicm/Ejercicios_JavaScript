@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Foro evaluable</title>
+    <!--llama a la api jQuery-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        //pone a la espera el código JavaScript a que cargue el HTML
+        $(document).ready(function(){
+            //selecciona todo el body, ocultando el contenido del body y aparezca 
+            //el contenido en 10 segundos.
+            $("body").hide().fadeIn(10000);
+        });
+    </script>  
+</head>
+<body>
+ <h1>Presentación</h1>
+ <img src="imagen.png" width="35%" height="25%"> 
+ <h1>Meses del año</h1>
+<script>
+var meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julo","Agosto","Septiembre",
+"Octubre","Noviembre","Diciembre"];
+for(var i=0;i<meses.length;i++){
+	document.write(meses[i]+"<br/>");
+
+}
+</script>   
+</body>
+</html>
