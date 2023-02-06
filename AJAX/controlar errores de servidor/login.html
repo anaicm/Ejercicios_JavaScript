@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Noticias varias</title>
+<link href="externa.css" rel="stylesheet">
+<style>
+#noticias li {
+	display: inline-block;
+	margin-right: 30px;
+}
+#noticias li a {
+	padding: 5px 10px; 
+	background-color: white;
+	color: black;
+	text-decoration: none;	
+}
+#noticias li a:hover {
+	background-color: rgb(255,153,0);
+	color: white;
+}
+#contenidos_externos #noticia {
+	margin-top: 10px;
+	padding: 20px;
+	border: 1px solid white;	
+}
+</style>
+<script src="../Jquery/jquery-2.1.3.js"></script>
+<script>
+//para probarlo hay que subir al servidor(filezilla) y probarlo con el dominio de este (url)
+
+$(document).ready(function() {
+	//todo lo que contenga esta función anónima se va a enviar cuando formulemos el formulario al pulsar "submit"
+	$("#login").submit(function(){
+		//los datos que vamos a enviar al servidor deben de ser empaquetados para que el servidor los coja y los compare
+		//hay que crear un literal, un literal es un paquete, este se crea con nombre:valor de cada campo
+		// en este caso son dos campos nada mas, pero si hay muchos campos con la funcion serialize() de la libreria JQUERY  
+		//simplifica la creacion del paquete ya que recorre en este caso todos los datos del formulario "login" y los va 
+		//almacenando. 
+		var datosFormulario=$(this).serialize()
+
+		/*var datosFormulario={
+			//usuario->tiene que ser el mismo nombre que se le da en el archivo php
+			//$("#usuario").val()-> es el valor que entra en el cuadro de texto mediante la funcion val
+			usuario:$("#usuario").val(),
+			contra:$("#contra").val()
+		}*/
+		//con el paquete ya creado enviarlo al servidor con get
+		$.get("login.php",datosFormulario,procesarDatos);
+		return false;//para que no recargue una página nueva, haga lo que contiene la funcion y no realice lo que por defecto
+		//hace el evento submit y recargue una página nueva.
+	});
+	//funcion para procesar los datos, estos se almacenan en el argumento de la funcion "datos_devueltos"
+	function procesarDatos(datos_devueltos){
+		//si los datos devueltos son igual a autorizado (archivo php)
+		if(datos_devueltos=="autorizado"){
+			//se realiza la modificación en el DOM para no recargar la página y se almacenara en el div "contenidos_externos"
+			//apuntando al div se modifica el HTML apuntando el código que contiene
+			$("#contenidos_externos").html("<p> Usuario correcto </p>")
+		}else{
+			$("#contenidos_externos").html("<p> Usuario incorrecto </p>")
+		}
+
+	}			
+}); 
+</script>
+</head>
+<body>
+
+	<div class="cabecera">
+		<p class="logo">Procesando respuesta del servidor</p>
+	</div>
+	<div class="contenido">
+		<div class="principal">
+			<form method="get" action="login.php" id="login">
+            <table>
+            	<tr>
+                	<td>					
+						<label for="usuario">Usuario:</label>
+                    </td>
+                    <td>
+						<input type="text" name="usuario" id="usuario">
+					</td>
+                    </tr>
+                    <tr>
+                    <td>
+						<label for="contra">Contaseña: </label>
+                     </td>
+                     <td>
+						<input type="text" name="contra" id="contra">
+					</td>
+                    </tr>
+                    <tr>
+                    <td colspan="2" align="center">
+						<input type="submit" name="boton" id="boton" value="Enviar" >
+					</td>
+                    </tr>
+                    </table>
+				</form>
+			<div id="contenidos_externos"></div>
+		</div>
+	</div>
+
+</body>
+</html>

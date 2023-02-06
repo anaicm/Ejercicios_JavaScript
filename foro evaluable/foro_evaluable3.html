@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Foro evaluable JavaScript</title>
+</head>
+<body>
+ <div id="fotos">
+    <img src="imagen.png" width="250" height="175"> 
+    <img src="imagen2.png" width="250" height="175"> 
+    <img src="imagen4.png" width="250" height="175"> 
+ </div>
+ <!----------------Código JavaScript----------------------------->
+ <script>
+    //querySelectorAll () crea un array de las imagenes
+    var imagenes=document.querySelectorAll("#fotos img");
+    for(var i=0;i<imagenes.length;i++){//recorre el array
+        imagenes[i].style.opacity="0.5";// da estilo a cada imagen quitandole nitidez.
+    }
+</script>  
+</body>
+</html>

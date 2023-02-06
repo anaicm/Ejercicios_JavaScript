@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+//para probarlo hay que subir al servidor(filezilla) y probarlo con el dominio de este (url)
+//mismo ejemplo que el del Get y post
+
+$(document).ready(function() {
+	//apunta al objeto form con identificador "login", al pulsar el submit realiza la funcion anónima
+	$("#login").submit(function(){
+		//guarda el objeto XHR y con la funcion serialize() recorre todos los campos del formulario
+		var datosFormulario=$(this).serialize()
+		//la función error() de la librería jQuery y como parámetro le entra 
+		//una función que se encargue de gestionar estos errores inesperados, 
+		//que puedan surgir como es que no encuentre el archivo, etc.
+		//$.get("http://localhost:55116/login.php",datosFormulario,procesarDatos).error(procesar_Error);
+		//la función ajax() permite al usuario interactuar independientemente del transporte HTTP
+		$.ajax({
+			url: "http://localhost/ejerciciosPHP/CRUD/LOGIN.PHP",
+			data: datosFormulario// data:los parametros que le pasa al servidor
+			}).done(function(respuesta) {//done() devolucion de los datos
+				procesarDatos(respuesta);//realiza la función
+			});
+		return false;
+	});
+	function procesarDatos(datos_devueltos){
+		if(datos_devueltos=="autorizado"){//si la respuesta es igual autorizado
+			$("#contenidos_externos").html("<p> Usuario correcto </p>")//modifica el DOM con html
+		}else{//si la respuesta es distinta 
+			$("#contenidos_externos").html("<p> Usuario incorrecto </p>")//modifica el DOM con html
+		}
+
+	}
+	//funcion para procesar el error
+	function procesar_Error(){
+		var mensaje_Error="Ups! Ha ocurrido un error, vuelve a intentarlo";
+		$("#contenidos_externos").html("<p>" + mensaje_Error+"</p>");
+	}	
+}); 
+</script>
+</head>
+<body>
+	<div>
+		<p>Procesando respuesta del servidor</p>
+	</div>
+	<div>
+		<form id="login">
+           <table>
+        	   	<tr>
+                	<td>					
+						<label for="usuario">Usuario:</label>
+                    </td>
+                    <td>
+						<input type="text" name="usuario" id="usuario">
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						<label for="contra">Contaseña: </label>
+                     </td>
+                     <td>
+						<input type="text" name="contra" id="contra">
+					</td>
+                </tr>
+				<tr>
+                    <td colspan="2">
+						<input type="submit" name="boton" id="boton" value="Enviar" >
+					</td>
+                </tr>
+            </table>
+		</form>
+		<div id="contenidos_externos"></div>
+	</div>
+</body>
+</html>

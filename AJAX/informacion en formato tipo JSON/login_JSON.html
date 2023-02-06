@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON</title>
+
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+//para probarlo hay que subir al servidor(filezilla) y probarlo con el dominio de este (url)
+//mismo ejemplo que el del Get y post
+
+$(document).ready(function() {
+	
+	$("#login").submit(function(){
+		 
+		var datosFormulario=$(this).serialize()
+		//para poder recibir los datos del servidor hay que utilizar la funcion getJSON()
+		//$.get("login.php",datosFormulario,procesarDatos); no vale para este formato.
+        //aunque su sinxtasis es identica a las funciones get y post.
+        $.getJSON("http://localhost/ejercicios_javascript/ajax/get%20y%20post/login_JSON.php",datosFormulario,procesarDatos);
+		return false;
+	});
+	
+	function procesarDatos(datos_devueltos){
+        //acceder a la información
+        //primero donde se quiere colocar la informacion
+        $("#contenidos_externos").html("<p> La edad es: "+datos_devueltos.edad+"</P>");//acceder a un elemento del objeto
+        //acceder a todos los elementos del objeto
+        var informacion="<p> Nombre: " + datos_devueltos.nombre +"</p>";
+		informacion+="<p> Apellido: " + datos_devueltos.apellido +"</p>";
+        informacion+="<p> Edad: " + datos_devueltos.edad +"</p>";
+        $("#contenidos_externos").html(informacion);
+
+	}	
+
+}); 
+</script>
+</head>
+<body>
+
+	<div class="cabecera">
+		<p class="logo">Procesando respuesta del servidor</p>
+	</div>
+	<div class="contenido">
+		<div class="principal">
+			<form method="get" action="login.php" id="login">
+            <table>
+            	<tr>
+                	<td>					
+						<label for="usuario">Usuario:</label>
+                    </td>
+                    <td>
+						<input type="text" name="usuario" id="usuario">
+					</td>
+                    </tr>
+                    <tr>
+                    <td colspan="2" align="center">
+						<input type="submit" name="boton" id="boton" value="Enviar" >
+					</td>
+                    </tr>
+                    </table>
+				</form>
+			<div id="contenidos_externos"></div>
+		</div>
+	</div>
+
+</body>
+</html>

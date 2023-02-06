@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AJAX</title>
+    <style>
+        #noticias li{
+            display: inline-block;
+            margin-right: 30px;
+        }
+        #noticias li a{
+            padding: 5px 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+        }
+        #noticias li a:hover{
+            background-color: rgb(255, 153,0);
+        }
+        #contenidos_externos #noticias{
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+    </style>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // decir a los vinculos <a href> de la pagina que cuando se pulse sobre ellos carguen la página correspondiente
+            //apuntando al selector noticias y su descendiente <a>
+            $("noticias a").click(function(){
+                //rescata los href del objeto ("noticas a") que hacemos click (guarda las url)
+                var url=$(this).attr("href");
+                //load()realiza una petición al servidor y este responde enviando el archivo que se ha solicitado
+                //en los parametros de load entra la url del archivo, si solo se quiere coger un contenido del elemento
+                //se llama con el selector, ejemplo: load("deportivas.html #noticias") y solo llamara al contenido que contenga ese 
+                //selector y lo cargara en #contenidos externos.
+                $("#contenidos_externos").load(url+ " #noticias")
+                return false; // elimina el comportamiento que tiene por defecto el elemento <a> en el body.
+            });
+            
+        });
+
+    </script>
+ 
+</head>
+<body>
+    <div class="cabecera">
+        <p class="logo">Funcion Load</p>
+    </div>
+    <div class="contenido">
+        <div>
+            <h1>Varias noticias</h1>
+            <ul id="noticias">
+                <!--<li><a href="deportivas.html">Noticias Generales</a></li>-->
+                <li><a href="generales.html">Noticias Generales</a></li>
+                <li><a href="deportivas.html">Noticias Deportivas</a></li><!--para que los archivos se cargen en la misma página hay que subirlos al servidor local filezilla-->
+                <li><a href="tiempo.html">Noticias del Tiempo</a></li>
+            </ul>
+            <div id="contenidos externos"></div><!--div para cargar las páginas y no tener que recargar-->
+        </div>
+    </div>
+   
+  
+</body>
+</html>
