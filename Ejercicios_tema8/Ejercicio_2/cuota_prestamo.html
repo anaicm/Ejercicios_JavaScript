@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calcular Cuota</title>
+<!-- -->
+<!--código que llama al archivo jQuery -->
+<script src="jquery-3.6.3.min.js"></script>
+<!--código jQuery y JavaScript -->
+<script src="cuota_prestamo.js"></script>
+</head>
+<body>
+	<div>
+		<form id="cuota">
+           <table>
+			<tbody>
+        	   	<tr>
+                    <td>
+						<input type="number" name="capital" id="capital" placeholder="Capital solicitado" min="0">
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						<input type="number" name="interes" id="interes" placeholder="Interés actual" min="0">
+					</td>
+                </tr>
+                <td>
+                    <input type="number" name="meses" id="meses" placeholder="Plazo(meses)" min="1">
+                </td>
+				<tr>
+                    <td>
+						<input type="submit" name="boton" id="boton" value="Calcular" >
+					</td>
+                </tr>
+			</tbody>
+            </table>
+		</form>
+		<div id="contenidos_externos">
+			<p>Su cuota mensual será de: Euros</p>
+		</div>
+	</div>
+</body>
+</html>

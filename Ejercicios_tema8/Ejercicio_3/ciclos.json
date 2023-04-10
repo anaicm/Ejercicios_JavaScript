@@ -1,0 +1,22 @@
+{
+    "ciclos": {
+      "ciclo": [
+        {
+          "abrebiatura_ciclo": "SMR",
+          "nombre": "Sistemas Microinformáticos y Redes."
+        },
+        {
+          "abrebiatura_ciclo": "ASIR",
+          "nombre": "Administración de sistemas informáticos y redes."
+        },
+        {
+          "abrebiatura_ciclo": "DAW",
+          "nombre": "Desarrollo de Aplicaciones Web."
+        },
+        {
+          "abrebiatura_ciclo": "DAM",
+          "nombre": "Desarrollo de aplicaciones multiplataforma."
+        }
+      ]
+    }
+}
